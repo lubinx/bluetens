@@ -1,0 +1,61 @@
+{
+    "configurations": [
+        {
+            "name": "bluetens/duosport/pinktens",
+            "includePath": [
+                "./",
+                "./bluetens/",
+                "../ultracore/inc",
+                "../qn902x"
+            ],
+            "defines": [
+                "__UVISION_VERSION"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c99",
+            "cppStandard": "c++11"
+        },
+        {
+            "name": "fitsuit",
+            "includePath": [
+                "./",
+                "./fitsuit/",
+                "../ultracore/inc",
+                "../qn902x"
+            ],
+            "defines": [
+                "__UVISION_VERSION"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c99",
+            "cppStandard": "c++11"
+        },
+        {
+            "name": "bluetens2",
+            "includePath": [
+                "./",
+                "../ultracore/inc",
+                "../qn908x"
+            ],
+            "defines": [
+                "__UVISION_VERSION"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c99",
+            "cppStandard": "c++11"
+        }
+    ],
+    "version": 4
+}
