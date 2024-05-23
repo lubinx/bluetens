@@ -2657,7 +2657,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\EFR32_system.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\EFR32_system.c</PathWithFileName>
       <FilenameWithoutPath>EFR32_system.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2669,7 +2669,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\EFR32_startup.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\EFR32_startup.c</PathWithFileName>
       <FilenameWithoutPath>EFR32_startup.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2681,7 +2681,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\adc.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\adc.c</PathWithFileName>
       <FilenameWithoutPath>adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2693,7 +2693,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\rtc.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\rtc.c</PathWithFileName>
       <FilenameWithoutPath>rtc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2705,7 +2705,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\gpio.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\gpio.c</PathWithFileName>
       <FilenameWithoutPath>gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2717,7 +2717,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\pmu.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\pmu.c</PathWithFileName>
       <FilenameWithoutPath>pmu.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2729,7 +2729,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\flash.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\flash.c</PathWithFileName>
       <FilenameWithoutPath>flash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2741,7 +2741,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\timer.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\timer.c</PathWithFileName>
       <FilenameWithoutPath>timer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2753,7 +2753,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\uart.c</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\uart.c</PathWithFileName>
       <FilenameWithoutPath>uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2765,7 +2765,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\sl.bluetooth.cpp</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\sl.bluetooth.cpp</PathWithFileName>
       <FilenameWithoutPath>sl.bluetooth.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2777,7 +2777,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>../silabs/sdk/libbluetooth.a</PathWithFileName>
+      <PathWithFileName>../efr32xg22/sdk/libbluetooth.a</PathWithFileName>
       <FilenameWithoutPath>libbluetooth.a</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2789,7 +2789,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\silabs\gcc\lib_xg22sdk_gcc.a</PathWithFileName>
+      <PathWithFileName>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</PathWithFileName>
       <FilenameWithoutPath>lib_xg22sdk_gcc.a</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

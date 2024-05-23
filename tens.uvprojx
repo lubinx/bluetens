@@ -1201,62 +1201,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -2462,62 +2462,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -3723,62 +3723,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -4984,62 +4984,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -6245,62 +6245,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -7506,62 +7506,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -8767,62 +8767,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -10028,62 +10028,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -10333,7 +10333,7 @@
               <MiscControls>-march=armv8-m.main -mfpu=fpv5-sp-d16 -mfloat-abi=hard -Wno-pedantic -Wall -Wextra -Wconversion -Wformat -Wundef -Wshadow -fno-exceptions -ffunction-sections -fdata-sections</MiscControls>
               <Define>BLUETENS2</Define>
               <Undefine></Undefine>
-              <IncludePath>./;../tens;./bluetens2;../ultracore;../ultracore/inc;../ultracore/inc/cmsis;..\silabs\include</IncludePath>
+              <IncludePath>./;../tens;./bluetens2;../ultracore;../ultracore/inc;../ultracore/inc/cmsis;..\efr32xg22\include</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -10365,7 +10365,7 @@
 -lstdc++
 -Wl,--gc-sections
 </Misc>
-            <ScatterFile>../silabs/gcc/xg22_512k.ld</ScatterFile>
+            <ScatterFile>../efr32xg22/gcc/xg22_512k.ld</ScatterFile>
           </LDarm>
         </TargetArm>
       </TargetOption>
@@ -11058,62 +11058,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -11391,7 +11391,7 @@
  -mfpu=fpv5-sp-d16 -mfloat-abi=hard
 --specs=nosys.specs --specs=nano.specs -lstdc++
 -Wl,--gc-sections</Misc>
-            <ScatterFile>../silabs/gcc/xg22_512k.ld</ScatterFile>
+            <ScatterFile>../efr32xg22/gcc/xg22_512k.ld</ScatterFile>
           </LDarm>
         </TargetArm>
       </TargetOption>
@@ -12084,62 +12084,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -12417,7 +12417,7 @@
  -mfpu=fpv5-sp-d16 -mfloat-abi=hard
 --specs=nosys.specs --specs=nano.specs -lstdc++
 -Wl,--gc-sections</Misc>
-            <ScatterFile>../silabs/gcc/xg22_512k.ld</ScatterFile>
+            <ScatterFile>../efr32xg22/gcc/xg22_512k.ld</ScatterFile>
           </LDarm>
         </TargetArm>
       </TargetOption>
@@ -13110,62 +13110,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
@@ -13443,7 +13443,7 @@
  -mfpu=fpv5-sp-d16 -mfloat-abi=hard
 --specs=nosys.specs --specs=nano.specs -lstdc++
 -Wl,--gc-sections</Misc>
-            <ScatterFile>../silabs/gcc/xg22_512k.ld</ScatterFile>
+            <ScatterFile>../efr32xg22/gcc/xg22_512k.ld</ScatterFile>
           </LDarm>
         </TargetArm>
       </TargetOption>
@@ -14136,62 +14136,62 @@
             <File>
               <FileName>EFR32_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_system.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_system.c</FilePath>
             </File>
             <File>
               <FileName>EFR32_startup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\EFR32_startup.c</FilePath>
+              <FilePath>..\efr32xg22\EFR32_startup.c</FilePath>
             </File>
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\adc.c</FilePath>
+              <FilePath>..\efr32xg22\adc.c</FilePath>
             </File>
             <File>
               <FileName>rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\rtc.c</FilePath>
+              <FilePath>..\efr32xg22\rtc.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\gpio.c</FilePath>
+              <FilePath>..\efr32xg22\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\pmu.c</FilePath>
+              <FilePath>..\efr32xg22\pmu.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\flash.c</FilePath>
+              <FilePath>..\efr32xg22\flash.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\timer.c</FilePath>
+              <FilePath>..\efr32xg22\timer.c</FilePath>
             </File>
             <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\silabs\uart.c</FilePath>
+              <FilePath>..\efr32xg22\uart.c</FilePath>
             </File>
             <File>
               <FileName>sl.bluetooth.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\silabs\sl.bluetooth.cpp</FilePath>
+              <FilePath>..\efr32xg22\sl.bluetooth.cpp</FilePath>
             </File>
             <File>
               <FileName>libbluetooth.a</FileName>
               <FileType>4</FileType>
-              <FilePath>../silabs/sdk/libbluetooth.a</FilePath>
+              <FilePath>../efr32xg22/sdk/libbluetooth.a</FilePath>
             </File>
             <File>
               <FileName>lib_xg22sdk_gcc.a</FileName>
               <FileType>4</FileType>
-              <FilePath>..\silabs\gcc\lib_xg22sdk_gcc.a</FilePath>
+              <FilePath>..\efr32xg22\gcc\lib_xg22sdk_gcc.a</FilePath>
             </File>
             <File>
               <FileName>libultracore_armv7-fpv4-sp-d16.a</FileName>
