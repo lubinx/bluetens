@@ -352,41 +352,41 @@
 //      <o34>PB02 (ANT_SW)
 //          <0=>GPIOB2(I/O)
 //          <1=>ANT_SW(O)
-    #define PA00_FUNC_                  (0)
-    #define PA01_FUNC_                  (0)
-    #define PA02_FUNC_                  (0)
-    #define PA03_FUNC_                  (0)
-    #define PA04_FUNC_                  (0)
-    #define PA05_FUNC_                  (1)
-    #define PA06_FUNC_                  (0)
-    #define PA07_FUNC_                  (0)
-    #define PA08_FUNC_                  (0)
-    #define PA09_FUNC_                  (0)
-    #define PA10_FUNC_                  (0)
-    #define PA11_FUNC_                  (0)
-    #define PA12_FUNC_                  (0)
-    #define PA13_FUNC_                  (0)
-    #define PA14_FUNC_                  (0)
-    #define PA15_FUNC_                  (0)
-    #define PA16_FUNC_                  (4)
-    #define PA17_FUNC_                  (4)
-    #define PA18_FUNC_                  (0)
-    #define PA19_FUNC_                  (0)
-    #define PA20_FUNC_                  (0)
-    #define PA21_FUNC_                  (0)
-    #define PA22_FUNC_                  (0)
-    #define PA23_FUNC_                  (0)
-    #define PA24_FUNC_                  (0)
-    #define PA25_FUNC_                  (0)
-    #define PA26_FUNC_                  (0)
-    #define PA27_FUNC_                  (0)
-    #define PA28_FUNC_                  (0)
-    #define PA29_FUNC_                  (0)
-    #define PA30_FUNC_                  (0)
-    #define PA31_FUNC_                  (0)
-    #define PB00_FUNC_                  (0)
-    #define PB01_FUNC_                  (0)
-    #define PB02_FUNC_                  (0)
+    #define PA00_MUX_FUNC               (0)
+    #define PA01_MUX_FUNC               (0)
+    #define PA02_MUX_FUNC               (0)
+    #define PA03_MUX_FUNC               (0)
+    #define PA04_MUX_FUNC               (0)
+    #define PA05_MUX_FUNC               (1)
+    #define PA06_MUX_FUNC               (0)
+    #define PA07_MUX_FUNC               (0)
+    #define PA08_MUX_FUNC               (0)
+    #define PA09_MUX_FUNC               (0)
+    #define PA10_MUX_FUNC               (0)
+    #define PA11_MUX_FUNC               (0)
+    #define PA12_MUX_FUNC               (0)
+    #define PA13_MUX_FUNC               (0)
+    #define PA14_MUX_FUNC               (0)
+    #define PA15_MUX_FUNC               (0)
+    #define PA16_MUX_FUNC               (4)
+    #define PA17_MUX_FUNC               (4)
+    #define PA18_MUX_FUNC               (0)
+    #define PA19_MUX_FUNC               (0)
+    #define PA20_MUX_FUNC               (0)
+    #define PA21_MUX_FUNC               (0)
+    #define PA22_MUX_FUNC               (0)
+    #define PA23_MUX_FUNC               (0)
+    #define PA24_MUX_FUNC               (0)
+    #define PA25_MUX_FUNC               (0)
+    #define PA26_MUX_FUNC               (0)
+    #define PA27_MUX_FUNC               (0)
+    #define PA28_MUX_FUNC               (0)
+    #define PA29_MUX_FUNC               (0)
+    #define PA30_MUX_FUNC               (0)
+    #define PA31_MUX_FUNC               (0)
+    #define PB00_MUX_FUNC               (0)
+    #define PB01_MUX_FUNC               (0)
+    #define PB02_MUX_FUNC               (0)
 //  </h>
 //****************************************************************
 //  <h>Pin PAD Pull (Pull-Up RST)
@@ -534,41 +534,41 @@
 //          <0=>High-Z
 //          <1=>Pull-Down
 //          <2=>Pull-Up
-    #define PA00_PAD_PULL_              (1)
-    #define PA01_PAD_PULL_              (2)
-    #define PA02_PAD_PULL_              (2)
-    #define PA03_PAD_PULL_              (2)
-    #define PA04_PAD_PULL_              (2)
-    #define PA05_PAD_PULL_              (0)
-    #define PA06_PAD_PULL_              (2)
-    #define PA07_PAD_PULL_              (2)
-    #define PA08_PAD_PULL_              (2)
-    #define PA09_PAD_PULL_              (2)
-    #define PA10_PAD_PULL_              (2)
-    #define PA11_PAD_PULL_              (2)
-    #define PA12_PAD_PULL_              (2)
-    #define PA13_PAD_PULL_              (2)
-    #define PA14_PAD_PULL_              (2)
-    #define PA15_PAD_PULL_              (2)
-    #define PA16_PAD_PULL_              (0)
-    #define PA17_PAD_PULL_              (0)
-    #define PA18_PAD_PULL_              (2)
-    #define PA19_PAD_PULL_              (2)
-    #define PA20_PAD_PULL_              (2)
-    #define PA21_PAD_PULL_              (2)
-    #define PA22_PAD_PULL_              (1)
-    #define PA23_PAD_PULL_              (1)
-    #define PA24_PAD_PULL_              (2)
-    #define PA25_PAD_PULL_              (2)
-    #define PA26_PAD_PULL_              (2)
-    #define PA27_PAD_PULL_              (2)
-    #define PA28_PAD_PULL_              (2)
-    #define PA29_PAD_PULL_              (2)
-    #define PA30_PAD_PULL_              (2)
-    #define PA31_PAD_PULL_              (2)
-    #define PB00_PAD_PULL_              (2)
-    #define PB01_PAD_PULL_              (2)
-    #define PB02_PAD_PULL_              (2)
+    #define PA00_DEF_PAD_PULL           (1)
+    #define PA01_DEF_PAD_PULL           (2)
+    #define PA02_DEF_PAD_PULL           (2)
+    #define PA03_DEF_PAD_PULL           (2)
+    #define PA04_DEF_PAD_PULL           (2)
+    #define PA05_DEF_PAD_PULL           (0)
+    #define PA06_DEF_PAD_PULL           (2)
+    #define PA07_DEF_PAD_PULL           (2)
+    #define PA08_DEF_PAD_PULL           (2)
+    #define PA09_DEF_PAD_PULL           (2)
+    #define PA10_DEF_PAD_PULL           (2)
+    #define PA11_DEF_PAD_PULL           (2)
+    #define PA12_DEF_PAD_PULL           (2)
+    #define PA13_DEF_PAD_PULL           (2)
+    #define PA14_DEF_PAD_PULL           (2)
+    #define PA15_DEF_PAD_PULL           (2)
+    #define PA16_DEF_PAD_PULL           (0)
+    #define PA17_DEF_PAD_PULL           (0)
+    #define PA18_DEF_PAD_PULL           (2)
+    #define PA19_DEF_PAD_PULL           (2)
+    #define PA20_DEF_PAD_PULL           (2)
+    #define PA21_DEF_PAD_PULL           (2)
+    #define PA22_DEF_PAD_PULL           (1)
+    #define PA23_DEF_PAD_PULL           (1)
+    #define PA24_DEF_PAD_PULL           (2)
+    #define PA25_DEF_PAD_PULL           (2)
+    #define PA26_DEF_PAD_PULL           (2)
+    #define PA27_DEF_PAD_PULL           (2)
+    #define PA28_DEF_PAD_PULL           (2)
+    #define PA29_DEF_PAD_PULL           (2)
+    #define PA30_DEF_PAD_PULL           (2)
+    #define PA31_DEF_PAD_PULL           (2)
+    #define PB00_DEF_PAD_PULL           (2)
+    #define PB01_DEF_PAD_PULL           (2)
+    #define PB02_DEF_PAD_PULL           (2)
 //  </h>
 //****************************************************************
 //  <h>Pin Driven Strength (Source 0.9mA / Sink 0.5mA RST)
@@ -824,67 +824,6 @@
     #define GAP_PPCP_CONN_LATENCY       (0)
     #define GAP_PPCP_CONN_TIMEOUT       (1600)
 //      </h>
-//  </h>
-//  <h> Attach DEV
-//      <e> I2C #0
-//          <o1> Speed in kbits/s       <1-1600>
-//              <i> formula: APBClock / 20000 / Speed - 1
-//              <i> <==Calculate Table==>
-//              <i>  8M APBClock =  400(k) / Speed(up to  400k) - 1
-//              <i> 16M APBClock =  800(k) / Speed(up to  800k) - 1
-//              <i> 32M APBClock = 1600(k) / Speed(up to 1600k) - 1
-    #define I2C0_ENABLE                 (0)
-    #define I2C0_BPS                    (200)
-//      </e>
-//      <e> I2C #1
-//          <o1> Speed in kbits/s       <1-1600>
-//              <i> formula: APBClock / 20000 / Speed - 1
-//              <i> <==Calculate Table==>
-//              <i>  8M APBClock =  400(k) / Speed(up to  400k) - 1
-//              <i> 16M APBClock =  800(k) / Speed(up to  800k) - 1
-//              <i> 32M APBClock = 1600(k) / Speed(up to 1600k) - 1
-    #define I2C1_ENABLE                 (0)
-    #define I2C1_BPS                    (200)
-//      </e>
-// </h>
-
 //<<< end of configuration section >>>
 ///**************************************************************************
-
-#include "syscon.h"
-
-#if CLK_XTAL_SEL_ == 0
-    #if CLK_DIV_TO_16MHZ_ == 0
-        #define XTAL_CLK                XTAL_32M
-    #else
-        #define XTAL_CLK                DIV_XTAL_16M
-    #endif
-#else
-    #define XTAL_CLK                    XTAL_16M
-#endif
-
-#if   CLK_SYS_SEL_ == 0
-// RCO High Frequency as Main Clock
-    #if CLK_DIV_TO_16MHZ_ == 0
-        #define SYS_CLK_                RCO_48M
-    #else
-        #define SYS_CLK_                DIV_RCO_16M
-    #endif
-#elif CLK_SYS_SEL_ == 1
-// AHB clock as Main Clock
-    #define SYS_CLK_                    XTAL_CLK
-#elif CLK_SYS_SEL_ == 2
-// XTAL/RCO 32 KHz as Main Clock
-    #if CLK_32K_SOURCE_ == 0
-        #define SYS_CLK_                XTAL_32K
-    #else
-        #define SYS_CLK_                RCO_32K
-    #endif
-#else
-    #error "error in clock selection"
-#endif
-
-#define CLK_AHB_VAL_                    SYS_CLK_
-#define CLK_APB_VAL_                    SYS_CLK_
-
 #endif

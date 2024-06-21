@@ -1,0 +1,40 @@
+# gcc output
+*.out
+
+# CMSIS mainline clone
+CMSIS/
+
+# keil garbage
+**/JLink*.*
+*.uvguix.*
+*.uvgui.*
+**/*.uvoptx
+**/*.scvd
+**/RTE
+**/Objects
+**/Listings
+ArInp.*
+
+# sdk ignored, these was polyfill by driver
+sdk/genfsk_1.3.5
+sdk/usb_1.6.3/osa/
+sdk/bluetooth_1.5.7/*
+sdk/framework_5.6.8/*
+
+!sdk/bluetooth_1.5.7/host/
+!sdk/bluetooth_1.5.7/controller/
+
+!sdk/framework_5.6.8/Common
+sdk/framework_5.6.8/Common/devices/bootloader
+sdk/framework_5.6.8/Common/devices/QN908XC/rco32k_calibration.*
+
+!sdk/framework_5.6.8/SecLib
+
+# CMake
+.cmake
+ultracore
+build/
+# vscode search & open symlink dir
+!.cmake/
+!ultracore/
+

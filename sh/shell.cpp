@@ -86,9 +86,8 @@ void SHELL_init(void)
     UCSH_init_instance(&BLE_sh_env, blevfd, sizeof(BLE_sh_stack), BLE_sh_stack);
 }
 
-void __trace(enum TRACE_LEVEL_E lvl, char const *fmt, ...)
+void __trace(char const *fmt, ...)
 {
-    ARG_UNUSED(lvl);
     static char buffer[256];
 
     va_list vl;
@@ -201,7 +200,7 @@ static int SHELL_bdname(struct UCSH_env *env)
 #if defined(HW_DEBUG) || defined(DEBUG)
 static int SHELL_dbg_status(struct UCSH_env *env)
 {
-    UCSH_printf(env, "program location: %08x, heap approximately: %u\r\n", FLASH_program_location(), HEAP_avail());
+    UCSH_printf(env, "program location: %08x, heap avail: %u\r\n", FLASH_program_location(), SYSCON_get_heap_avail());
     return ECHO_OFF;
 }
 #endif
