@@ -1,0 +1,38 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "defaults": {},
+  "configurations": [
+    {
+      "name": "Debug qn908x bluetens",
+      "type": "cppdbg",
+      "request": "launch",
+      "miDebuggerServerAddress": "127.0.0.1:2331",
+      "program": "${workspaceFolder}/build/QN908X_bluetens.elf",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "MIMode": "gdb",
+      "miDebuggerPath": "${userHome}/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb",
+      "stopAtConnect": true,
+      "postRemoteConnectCommands": [
+        {
+          "text": "monitor reset"
+        },
+        {
+          "text": "set mem inaccessible-by-default off"
+        },
+        {
+          "text": "load"
+        },
+        {
+          "text": "monitor reset"
+        },
+      ],
+      "svdPath": "${workspaceFolder}/../qn908x/svd/qn908XC.svd",
+    }
+  ]
+}

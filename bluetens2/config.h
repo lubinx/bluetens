@@ -12,10 +12,10 @@
     // #define NO_PINKTENS
 
 #if defined(QN908X)
-    #include "QN908X_porting.h"
+    #include "qn908x/QN908X_porting.h"
 #elif defined(EFR32BG22C224F512GM40)
     #define BG22
-    #include "BG22_porting.h"
+    #include "bg22/BG22_porting.h"
 #endif
 
 __BEGIN_DECLS
@@ -81,7 +81,7 @@ static inline
     #if defined(NO_PINKTENS)
         return false;
     #else
-        return GPIO_peek(PINKTENS_DET) > 0;
+        return 0 != GPIO_peek(PINKTENS_DET);
     #endif
     }
 

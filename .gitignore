@@ -33,8 +33,12 @@ sdk/framework_5.6.8/Common/devices/QN908XC/rco32k_calibration.*
 # CMake
 .cmake
 ultracore
-build/
+build
+qn908x
+efr32xg22
+
 # vscode search & open symlink dir
 !.cmake/
 !ultracore/
-
+!qn908x/
+!efr32xg22/

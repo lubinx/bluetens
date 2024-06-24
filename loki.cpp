@@ -515,7 +515,7 @@ int TParser::Open(char const *FileName)
         return -1;
     }
 
-    TRACE(LOG, "Loki File Version %d, DigitBase %d", Version(), DigitBase());
+    // TRACE("Loki File Version %d, DigitBase %d", Version(), DigitBase());
     return FFile->Fd();
 }
 
@@ -541,13 +541,13 @@ TBlock *TParser::NextBlock()
                     return NULL;
                 FFile->Seek(FSectionOffsets[SectionNo], SEEK_SET);
 
-                TRACE(LOG, "Script... No:%d @Offset:%d of %d msec",
-                    SectionNo + 1, FSectionOffsets[SectionNo], FTimeEstimateMS);
+                // TRACE("Script... No:%d @Offset:%d of %d msec",
+                //     SectionNo + 1, FSectionOffsets[SectionNo], FTimeEstimateMS);
             }
             else
             {
-                TRACE(LOG, "Reading...No:%d @Offset:%d of %d msec",
-                    FSectionCount, FCurrSectionOffset, FTimeEstimateMS);
+                // TRACE("Reading...No:%d @Offset:%d of %d msec",
+                //     FSectionCount, FCurrSectionOffset, FTimeEstimateMS);
             }
         }
 
@@ -593,7 +593,7 @@ bool TParser::ReadNext(void)
 
         if (TTaken::takenError == FTaken)
         {
-            TRACE(LOG, "parser error\r\n", 14);
+            // TRACE("parser error\r\n", 14);
             return false;
         }
         if (TTaken::takenIncomplete == FTaken)

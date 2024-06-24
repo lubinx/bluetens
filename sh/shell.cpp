@@ -25,11 +25,6 @@
 static int SHELL_bdname(struct UCSH_env *env);
 static int SHELL_battery(struct UCSH_env *env);
 
-#if defined(HW_DEBUG) || defined(DEBUG)
-    static int SHELL_dbg_status(struct UCSH_env *env);
-#endif
-
-
 static int BATT_compat_transform(int val);
 
 /// @var
@@ -73,10 +68,6 @@ void SHELL_init(void)
 #endif
 #ifndef NO_SHELL_DUMP
     UCSH_register("dump",   SHELL_dump);
-#endif
-
-#if defined(HW_DEBUG) || defined(DEBUG)
-    UCSH_register("dbg",    SHELL_dbg_status);
 #endif
 
     UART_createfd(CONSOLE_DEV, 115200, UART_PARITY_NONE, UART_STOP_BITS_ONE);
@@ -193,17 +184,6 @@ static int SHELL_bdname(struct UCSH_env *env)
     UCSH_printf(env,  "btnm=%s\r\n", AdName);
     return ECHO_OFF;
 }
-
-/***************************************************************************/
-/** UCSH @debug
-****************************************************************************/
-#if defined(HW_DEBUG) || defined(DEBUG)
-static int SHELL_dbg_status(struct UCSH_env *env)
-{
-    UCSH_printf(env, "program location: %08x, heap avail: %u\r\n", FLASH_program_location(), SYSCON_get_heap_avail());
-    return ECHO_OFF;
-}
-#endif
 
 /***************************************************************************/
 /** UCSH @override

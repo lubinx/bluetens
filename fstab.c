@@ -24,11 +24,13 @@ void FLASH_mountfs(void)
     #define FS_CLUSTER_SIZE             (FLASH_PAGE_SIZE)
 #endif
 
+    /*
     if (0 == ULTRAFS_mount(FLASH_createfd(), "flashfs", FS_CLUSTER_SIZE, FLASH_AVAIL_SIZE, FLASH_ERASE_FILL))
         chdir("/mnt/flashfs");
+    */
 }
 
 void FLASH_unmountfs(void)
 {
-    ULTRAFS_unmount("/mnt/flashfs");
+    // ULTRAFS_unmount("/mnt/flashfs");
 }

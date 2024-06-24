@@ -761,8 +761,8 @@ void TApplication::MSG_PreloadBlock(uint32_t const)
                 if (! block ||
                     (FCutoffSeconds > 0 && (clock() - FRunningTickStart) / 1000 > FCutoffSeconds))
                 {
-                    TRACE(LOG, "read done, %d msec", FCurrFile->TimeEstimateMS());
-                    TRACE(LOG, "waiting cached blocks to finish...");
+                    // TRACE("read done, %d msec", FCurrFile->TimeEstimateMS());
+                    // TRACE("waiting cached blocks to finish...");
 
                     delete FCurrFile;
                     FCurrFile = NULL;
@@ -861,7 +861,7 @@ void TApplication::MSG_PreloadBlock(uint32_t const)
 
     if (! FCurrFile && ! FCurrBlock.IsInfRepeat() && ! TIMER_is_running(HW_TIMER0))
     {
-        TRACE(LOG, "all done");
+        // TRACE("all done");
         FMsgQueue.PostMessage(MSG_STOPPING, stopAbort);
     }
     else

@@ -846,6 +846,16 @@
           </GroupOption>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -854,31 +864,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -1120,9 +1105,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -2107,6 +2092,16 @@
           </GroupOption>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -2115,31 +2110,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -2381,9 +2351,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -3368,6 +3338,16 @@
           </GroupOption>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -3376,31 +3356,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -3642,9 +3597,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -4629,6 +4584,16 @@
           </GroupOption>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -4637,31 +4602,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -4903,9 +4843,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -5384,7 +5324,7 @@
               <MiscControls>--no_wchar</MiscControls>
               <Define>QN908X,BLUETENS2</Define>
               <Undefine></Undefine>
-              <IncludePath>.\;.\bluetens2;..\ultracore\inc;..\qn908x\include;..\qn908x\</IncludePath>
+              <IncludePath>.\;.\bluetens2;..\ultracore\inc;..\qn908x\include;..\qn908x\;.\bluetens2\qn908x;..\qn908x\sdk;..\qn908x\sdk\bluetooth_1.5.7;..\qn908x\sdk\shim_dummy</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -5415,7 +5355,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>../qn908x/mdk\qn908x.sct</ScatterFile>
+            <ScatterFile>../qn908x/linkscript/QN908x.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -5890,6 +5830,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -5898,31 +5848,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -6164,9 +6089,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -6676,7 +6601,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>../qn908x/mdk\qn908x.sct</ScatterFile>
+            <ScatterFile>../qn908x/linkscript/QN908x.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -7151,6 +7076,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -7159,31 +7094,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -7425,9 +7335,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -7937,7 +7847,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>../qn908x/mdk\qn908x.sct</ScatterFile>
+            <ScatterFile>../qn908x/linkscript/QN908x.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -8412,6 +8322,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -8420,31 +8340,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -8686,9 +8581,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -9198,7 +9093,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>../qn908x/mdk\qn908x.sct</ScatterFile>
+            <ScatterFile>../qn908x/linkscript/QN908x.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -9673,6 +9568,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -9681,31 +9586,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -9947,9 +9827,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -10747,6 +10627,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -10755,31 +10645,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -11046,9 +10911,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -11773,6 +11638,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -11781,31 +11656,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -12072,9 +11922,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -12799,6 +12649,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -12807,31 +12667,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -13098,9 +12933,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -13825,6 +13660,16 @@
           <GroupName>bluetens 2</GroupName>
           <Files>
             <File>
+              <FileName>QN908X_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>QN908X_porting.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\bluetens2\qn908x\QN908X_porting.h</FilePath>
+            </File>
+            <File>
               <FileName>config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\config.h</FilePath>
@@ -13833,31 +13678,6 @@
               <FileName>ble.hpp</FileName>
               <FileType>5</FileType>
               <FilePath>.\bluetens2\ble.hpp</FilePath>
-            </File>
-            <File>
-              <FileName>BG22_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\BG22_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>EFR32_PIN_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\EFR32_PIN_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_porting.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_porting.h</FilePath>
-            </File>
-            <File>
-              <FileName>QN908X_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\bluetens2\QN908X_config.h</FilePath>
             </File>
             <File>
               <FileName>bluetens2.cpp</FileName>
@@ -14124,9 +13944,9 @@
               <FilePath>../ultracore\lib\lib_ultracore_mdk_qn908x.lib</FilePath>
             </File>
             <File>
-              <FileName>bluetooth_1_5_5.symdefs</FileName>
+              <FileName>fw_symbols_mdk.h</FileName>
               <FileType>3</FileType>
-              <FilePath>../qn908x/mdk\bluetooth_1_5_5.symdefs</FilePath>
+              <FilePath>..\qn908x\sdk\framework_5.6.8\Common\devices\QN908XC\mdk\fw_symbols_mdk.h</FilePath>
             </File>
           </Files>
         </Group>

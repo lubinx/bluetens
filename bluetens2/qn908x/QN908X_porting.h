@@ -1,12 +1,17 @@
 #ifndef __BLUETENS2_PORTING_H
 #define __BLUETENS2_PORTING_H           1
 
+#include <gpio.h>
+#include <uart.h>
+
 /// @pinktens
     #define PINKTENS_DET                PA07
 
 /// @BLE
     #define BLE_INCLUDE_HEADER          <nxp.ble.hpp>
     #define BLE_NAMESPACE               NXP
+
+    #define CONSOLE_DEV                 USART0
 
     #define STACK_SIZE_APP              (1024)
     #define STACK_SIZE_UART_SHELL       (1024)
