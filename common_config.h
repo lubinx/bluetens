@@ -5,14 +5,10 @@
 #include <stdbool.h>
 #include <ultracore/nvm.h>
 
-#ifdef DEBUG
-    #define HW_DEBUG
-#endif
-
 // #define HW_DEBUG
     // #define DEBUG_LOKI_PARSER
     // #define NO_SHUTDOWN
-    // #define NO_DET_HV_OUTPUT
+    #define NO_DET_HV_OUTPUT
     // #define NO_DET_CHARGING
     // #define NO_DET_BATTERY
 

@@ -4,6 +4,10 @@
 #include <gpio.h>
 #include <uart.h>
 
+    #define CONSOLE_DEV                 USART0
+    #define CONSOLE_TXD                 PA16
+    #define CONSOLE_RXD                 PA17
+
 /// @pinktens
     #define PINKTENS_DET                PA07
 
@@ -11,11 +15,9 @@
     #define BLE_INCLUDE_HEADER          <nxp.ble.hpp>
     #define BLE_NAMESPACE               NXP
 
-    #define CONSOLE_DEV                 USART0
-
-    #define STACK_SIZE_APP              (1024)
-    #define STACK_SIZE_UART_SHELL       (1024)
-    #define STACK_SIZE_BLE_SHELL        (1024)
+    #define STACK_SIZE_APP              (2048)
+    #define STACK_SIZE_UART_SHELL       (1560)
+    #define STACK_SIZE_BLE_SHELL        (2048)
 
 /// @buttons
     #define PIN_POWER_BUTTON            PA28

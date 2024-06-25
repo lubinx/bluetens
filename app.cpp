@@ -1,4 +1,6 @@
-#include <ultracore/nvm.h>
+#include <ultracore/timeo.h>
+#include <cstdlib>
+
 #include <timer.h>
 #include <adc.h>
 
@@ -269,7 +271,7 @@ void TApplication::GPIO_callback(uint32_t pins)
         while (1) NVIC_SystemReset();
 
 #ifdef PIN_POWER_BUTTON
-    if (PIN_POWER_BUTTON & pins)
+    if (PIN_POWER_BUTTON == (PIN_POWER_BUTTON & pins))
     {
         Shuttingdown = true;
         FMsgQueue.PostMessage(MSG_SHUTDOWN, 0);
@@ -277,7 +279,7 @@ void TApplication::GPIO_callback(uint32_t pins)
 #endif
 
 #ifdef PIN_CHARGING_DET
-    if ((PIN_CHARGING_DET & pins) && DET_is_charging())
+    if (PIN_CHARGING_DET == (PIN_CHARGING_DET & pins) && DET_is_charging())
     {
         if (! FManufactoringMode)
         {
@@ -293,9 +295,9 @@ void TApplication::GPIO_callback(uint32_t pins)
     {
         int adjust;
 
-        if (PIN_ADD_BUTTON & pins)
+        if (PIN_ADD_BUTTON == (PIN_ADD_BUTTON & pins))
             adjust = 1;
-        else if (PIN_SUB_BUTTON & pins)
+        else if (PIN_SUB_BUTTON == (PIN_SUB_BUTTON & pins))
             adjust = -1;
         else
             adjust = 0;
@@ -306,7 +308,7 @@ void TApplication::GPIO_callback(uint32_t pins)
 #endif
 
 #ifdef PIN_DIAL_EN
-    if (PIN_DIAL_CW & pins)
+    if (PIN_DIAL_CW == (PIN_DIAL_CW & pins))
     {
         static clock_t ADJUEST_tick = 0;
         clock_t now = clock();

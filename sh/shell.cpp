@@ -1,6 +1,6 @@
 #include <unistd.h>
+#include <stropts.h>
 
-#include <ultracore/nvm.h>
 #include <uart.h>
 #include <adc.h>
 #include <flash.h>
@@ -70,11 +70,18 @@ void SHELL_init(void)
     UCSH_register("dump",   SHELL_dump);
 #endif
 
-    UART_createfd(CONSOLE_DEV, 115200, UART_PARITY_NONE, UART_STOP_BITS_ONE);
-    UCSH_init_instance(&UART_sh_env, __stdout_fd, sizeof(UART_sh_stack), UART_sh_stack);
+    if (true)
+    {
+        uint32_t timeout = 3000;
+        ioctl(__stdout_fd, OPT_RD_TIMEO, &timeout);
+        UCSH_init_instance(&UART_sh_env, __stdout_fd, sizeof(UART_sh_stack), UART_sh_stack);
+    }
 
-    blevfd = BLE->Shell.CreateVFd();
-    UCSH_init_instance(&BLE_sh_env, blevfd, sizeof(BLE_sh_stack), BLE_sh_stack);
+    if (true)
+    {
+        blevfd = BLE->Shell.CreateVFd();
+        UCSH_init_instance(&BLE_sh_env, blevfd, sizeof(BLE_sh_stack), BLE_sh_stack);
+    }
 }
 
 void __trace(char const *fmt, ...)
@@ -203,7 +210,7 @@ void UCSH_startup_handle(struct UCSH_env *env)
         printf("bat=%d\r\n", App->Battery());
 
         /*
-#if defined(DEBUG) || defined(HW_DEBUG)
+#if defined(DEBUG)
         len = sprintf(env->buf, "prog=0x%x\r\n", FLASH_program_location());
         puts(env->buf);
 #endif

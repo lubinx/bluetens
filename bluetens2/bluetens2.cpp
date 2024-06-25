@@ -69,7 +69,7 @@ static uint16_t const *INTENSITY_table = NULL;
 #define LED_FREQ                        (100000)
 #define LED_MAX_LUMA                    (255)
 #define LED_FPS                         (LED_FREQ / LED_MAX_LUMA)
-#define LED_POWERUP_FRAMES              (LED_FPS / 3)
+#define LED_POWERUP_FRAMES              (LED_FPS / 4)
 #define LED_LOW_BATT_FRAMES             (LED_FPS * 4 / 5)
 
 /***************************************************************************/
@@ -168,11 +168,8 @@ void PLATFORM_shutdown(void)
     msleep(500);
 
 #ifdef QN908X
-    SYSCON->PIO_WAKEUP_EN0 = PIN_POWER_BUTTON;
-    SYSCON->PIO_WAKEUP_LVL0 = PIN_POWER_BUTTON | PIN_CHARGING_DET;
-
-    while (! GPIO_peek(PIN_POWER_BUTTON));
-    PMU_deep_sleep();
+    GPIO_wakeup_en(PIN_POWER_BUTTON, false);
+    GPIO_wakeup_en(PIN_CHARGING_DET, false);
 #else
     GPIO_disable(PIN_CHARGING_DET);
 
@@ -319,7 +316,7 @@ int INTENSITY_ctrl(uint32_t value)
 ****************************************************************************/
 static void GPIO_callback(uint32_t pins, void *arg)
 {
-    if (PIN_ADD_BUTTON & pins && TApplication::stateStopped == App->State())
+    if (PIN_ADD_BUTTON == (PIN_ADD_BUTTON & pins) && TApplication::stateStopped == App->State())
     {
         int count = 0;
         uint8_t idx;

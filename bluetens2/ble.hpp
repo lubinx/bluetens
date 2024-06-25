@@ -1,7 +1,6 @@
 #ifndef __BLUETENS2_BT_HPP
 #define __BLUETENS2_BT_HPP
 
-#include <ultracore.h>
 #include <bluetooth/uuid.h>
 #include <bluetooth/gap.tlv.hpp>
 #include <uc++/stream.hpp>

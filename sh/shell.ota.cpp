@@ -1,4 +1,5 @@
-#include <ctype.h>
+#include <cctype>
+#include <cstdlib>
 
 #include <adc.h>
 #include <flash.h>
@@ -33,14 +34,14 @@ int SHELL_ota(struct UCSH_env *env)
         if (! param)
             return EINVAL;
         size = strtoul(param, &p, 10);
-        if (0 == size && 'x' == tolower(*p))
+        if (0 == size && 'x' == std::tolower(*p))
             size = strtoul(param, NULL, 16);
 
         param = CMD_paramvalue_byname("c", env->argc, env->argv);
         if (! param)
             return EINVAL;
         crc  = (uint16_t)strtoul(param, &p, 10);
-        if (0 == crc && 'x' == tolower(*p))
+        if (0 == crc && 'x' == std::tolower(*p))
             crc = (uint16_t)strtoul(param, NULL, 16);
     }
 

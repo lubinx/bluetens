@@ -1,4 +1,5 @@
 #include <cctype>
+#include <cstdlib>
 
 #include "app.hpp"
 #include "shell.hpp"

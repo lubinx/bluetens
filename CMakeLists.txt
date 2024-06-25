@@ -5,7 +5,7 @@ project(bluetens)
 
 build_target(QN908X_bluetens
     DEVICE
-        "QN908XC"
+        "QN908X"
     DRIVER
         "../qn908x"
     CONFIG_DIR
@@ -19,9 +19,9 @@ build_target(QN908X_bluetens
         "*.cpp"
         "sh/*.cpp"
         "bluetens2/*.cpp"
+        "${ULTRACORE_ROOT}/src/hw/common_gpio.c"
     DEFINITIONS
-        # NVM_TAG="bluetens"
-        "QN908X"
+        NVM_TAG="bluetens"
         "BLUETENS2"
     OUTPUT_DIR
         "../_bin"
