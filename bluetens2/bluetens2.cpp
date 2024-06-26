@@ -511,15 +511,3 @@ static void LED_callback(uint16_t id, void *arg, uint32_t loop)
     else
         GPIO_set((uint32_t)arg);
 }
-
-/***************************************************************************/
-/** @INT
-****************************************************************************/
-#ifdef QN908X
-    extern "C" __attribute__((section(".textrw")))
-    void EXT_GPIO_WAKEUP_IRQHandler(void)
-    {
-        NVIC_SystemReset();
-        while (1);
-    }
-#endif
