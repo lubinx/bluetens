@@ -1,9 +1,9 @@
-#include <ultracore.h>
-#include <unistd.h>
+#include <fs/ultrafs.h>
 #include <flash.h>
 
 #include "fstab.h"
-#include <fs/ultrafs.h>
+
+static struct ULTRAFS_attr_t *attr = NULL;
 
 /****************************************************************************
  *  @filesystem
@@ -24,10 +24,11 @@ void FLASH_mountfs(void)
     #define FS_CLUSTER_SIZE             (FLASH_PAGE_SIZE)
 #endif
     int flash_fd = FLASH_createfd();
-    ULTRAFS_mount_root(flash_fd, FS_CLUSTER_SIZE, FLASH_AVAIL_SIZE, FLASH_ERASE_FILL);
+    attr = ULTRAFS_mount_root(flash_fd, FS_CLUSTER_SIZE, FLASH_AVAIL_SIZE, FLASH_ERASE_FILL);
 }
 
 void FLASH_unmountfs(void)
 {
-    // ULTRAFS_unmount("/mnt/flashfs");
+    if (NULL != attr)
+        ULTRAFS_unmount(attr);
 }
