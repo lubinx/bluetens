@@ -141,9 +141,9 @@ static inline
     {
     #ifndef NO_DET_CHARGING
         #ifdef QN908X
-            return GPIO_peek(PIN_CHARGING_DET) == 0;
+            return 0 == GPIO_peek(PIN_CHARGING_DET);
         #else
-            return GPIO_peek(PIN_CHARGING_DET) > 0;
+            return 0 != GPIO_peek(PIN_CHARGING_DET);
         #endif
     #else
         return false;
@@ -153,7 +153,7 @@ static inline
 static inline
     bool DET_HV_output(void)
     {
-        return ! GPIO_peek(PIN_HV_PULSE_DET);
+        return 0 == GPIO_peek(PIN_HV_PULSE_DET);
     }
 
 __END_DECLS

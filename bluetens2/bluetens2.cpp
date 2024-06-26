@@ -90,6 +90,7 @@ static int INTENSITY_pwm = -1;
 void PLATFORM_init(void)
 {
     GPIO_setdir_input_pp(PULL_UP, PIN_POWER_BUTTON | PIN_ADD_BUTTON | PIN_SUB_BUTTON, true);
+    GPIO_setdir_input_pp(PULL_UP, PIN_CHARGING_DET, true);
     GPIO_setdir_input(PINKTENS_DET);
 
     GPIO_setdir_output(PUSH_PULL, PIN_LDO_POWER | PWM_PIN |
@@ -176,7 +177,7 @@ void PLATFORM_shutdown(void)
     GPIO_intr_disable(PIN_ADD_BUTTON);
     GPIO_intr_disable(PIN_SUB_BUTTON);
 
-    while (! GPIO_peek(PIN_POWER_BUTTON));
+    while (0 == GPIO_peek(PIN_POWER_BUTTON));
 #endif
 }
 
@@ -519,5 +520,6 @@ static void LED_callback(uint16_t id, void *arg, uint32_t loop)
     void EXT_GPIO_WAKEUP_IRQHandler(void)
     {
         NVIC_SystemReset();
+        while (1);
     }
 #endif

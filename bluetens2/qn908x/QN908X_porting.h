@@ -16,7 +16,7 @@
     #define BLE_NAMESPACE               NXP
 
     #define STACK_SIZE_APP              (2048)
-    #define STACK_SIZE_UART_SHELL       (1560)
+    #define STACK_SIZE_UART_SHELL       (2048)
     #define STACK_SIZE_BLE_SHELL        (2048)
 
 /// @buttons

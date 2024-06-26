@@ -19,7 +19,6 @@ build_target(QN908X_bluetens
         "*.cpp"
         "sh/*.cpp"
         "bluetens2/*.cpp"
-        "${ULTRACORE_ROOT}/src/hw/common_gpio.c"
     DEFINITIONS
         NVM_TAG="bluetens"
         "BLUETENS2"

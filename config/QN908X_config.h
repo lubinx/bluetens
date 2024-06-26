@@ -71,10 +71,8 @@
 //              <1=> External Digital Clock
 //              <2=> External Sine Wave Clock
 //          <o2> XTAL32K_LOAD_CAP       <0-63:1>
-//              <i> Load CAP Selection
-//              <i> XTAL32K Load CAP = 3.6 pF + 0.4 pF * XTAL32K_LOAD_CAP + 6.4pF * XTAL32K_EXTRA_CAP
-//          <q3>XTAL32K_EXTRA_CAP
-//              <i>add extra XTAL32K load cap or not Def:Not Add
+//              <i> XTAL32K Load CAP = 3.6 pF + 0.4 pF * XTAL32K_LOAD_CAP + XTAL32K_EXTRA_CAP(6.4pF)
+//          <q3> XTAL32K_EXTRA_CAP(add extra 6.4pF)
     #define XTAL32K_ICTRL               (35)
     #define XTAL32K_INJ                 (0)
     #define XTAL32K_LOAD_CAP            (48)

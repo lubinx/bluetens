@@ -87,7 +87,7 @@ static inline
 static inline
     bool DET_HV_output(void)
     {
-        return ! GPIO_peek(PIN_HV_PULSE_DET);
+        return 0 == GPIO_peek(PIN_HV_PULSE_DET);
     }
 
 __END_DECLS

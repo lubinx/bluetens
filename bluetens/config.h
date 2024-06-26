@@ -117,14 +117,14 @@ static inline
     #ifdef NO_DET_CHARGING
         return false;
     #else
-        return GPIO_peek(PIN_CHARGING_DET) > 0;
+        return 0 != GPIO_peek(PIN_CHARGING_DET);
     #endif
     }
 
 static inline
     bool DET_HV_output(void)
     {
-        return ! GPIO_peek(PIN_HV_PULSE_DET);
+        return 0 == GPIO_peek(PIN_HV_PULSE_DET);
     }
 
 __END_DECLS
