@@ -93,7 +93,7 @@ MD5_t file_md5(int fd)
         MD5_context_t md5;
         uint8_t buf[64];
     };
-    struct file_md5_context *ctx = (struct file_md5_context *)malloc(sizeof(struct file_md5_context));
+    struct file_md5_context *ctx = (struct file_md5_context *)std::malloc(sizeof(struct file_md5_context));
 
     off_t pos = lseek(fd, 0, SEEK_CUR);
     lseek(fd, 0, SEEK_SET);
@@ -110,7 +110,7 @@ MD5_t file_md5(int fd)
     }
 
     MD5_t retval = MD5_final(&ctx->md5);
-    free(ctx);
+    std::free(ctx);
     lseek(fd, pos, SEEK_SET);
 
     return retval;

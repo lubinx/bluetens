@@ -26,4 +26,75 @@ build_target(QN908X_bluetens
         "../_bin"
 )
 
+if (NOT (CMAKE_BUILD_TYPE STREQUAL "Debug"))
+    build_target(QN908X_duosport
+        DEVICE
+            "QN908X"
+        DRIVER
+            "../qn908x"
+        CONFIG_DIR
+            "bluetens2/qn908x"
+        INCLUDE_DIRS
+            "."
+            "sh"
+            "bluetens2"
+        SRCS
+            "*.c"
+            "*.cpp"
+            "sh/*.cpp"
+            "bluetens2/*.cpp"
+        DEFINITIONS
+            NVM_TAG="bluetens"
+            "DUOSPORT2"
+        OUTPUT_DIR
+            "../_bin"
+    )
+
+    build_target(QN908X_pinktens
+        DEVICE
+            "QN908X"
+        DRIVER
+            "../qn908x"
+        CONFIG_DIR
+            "bluetens2/qn908x"
+        INCLUDE_DIRS
+            "."
+            "sh"
+            "bluetens2"
+        SRCS
+            "*.c"
+            "*.cpp"
+            "sh/*.cpp"
+            "bluetens2/*.cpp"
+        DEFINITIONS
+            NVM_TAG="bluetens"
+            "PINKTENS"
+        OUTPUT_DIR
+            "../_bin"
+    )
+
+    build_target(QN908X_medtens
+        DEVICE
+            "QN908X"
+        DRIVER
+            "../qn908x"
+        CONFIG_DIR
+            "bluetens2/qn908x"
+        INCLUDE_DIRS
+            "."
+            "sh"
+            "bluetens2"
+        SRCS
+            "*.c"
+            "*.cpp"
+            "sh/*.cpp"
+            "bluetens2/*.cpp"
+        DEFINITIONS
+            NVM_TAG="bluetens"
+            "MEDTENS"
+        OUTPUT_DIR
+            "../_bin"
+    )
+endif()
+
 print_targets()

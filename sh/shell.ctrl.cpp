@@ -9,7 +9,7 @@ int SHELL_mode(struct UCSH_env *env)
 {
     if (env->argc > 1)
     {
-        uint32_t val = (uint32_t)atoi(env->argv[1]);
+        uint32_t val = (uint32_t)std::atoi(env->argv[1]);
         if (val > Loki::MODE_MAX_VALUE)
             return EINVAL;
 
@@ -32,10 +32,10 @@ int SHELL_start_script(struct UCSH_env *env)
     {
         char *p;
 
-        cutoff = strtoul(param, &p, 10);
+        cutoff = std::strtoul(param, &p, 10);
         // hex
         if (0 == cutoff && 'x' == std::tolower(*p))
-            cutoff = strtoul(param, &p, 16);
+            cutoff = std::strtoul(param, &p, 16);
     }
     else
         cutoff = 0;
@@ -65,10 +65,10 @@ int SHELL_set_intensity(struct UCSH_env *env)
     {
         char *p;
 
-        str = strtoul(env->argv[1], &p, 10);
+        str = std::strtoul(env->argv[1], &p, 10);
         // hex prop
         if (0 == str && 'x' == std::tolower(*p))
-            str = strtoul(env->argv[1], &p, 16);
+            str = std::strtoul(env->argv[1], &p, 16);
 
         App->SetIntensity(str, false);
         msleep(10);

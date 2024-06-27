@@ -41,7 +41,7 @@ __BEGIN_DECLS
 
 #if defined(QN908X)
     #include "QN908X_porting.h"
-    #define PROJECT_VERSION             VERSION_INFO(3, 3, 5)
+    #define PROJECT_VERSION             VERSION_INFO(3, 3, 6)
 #elif defined(EFR32BG22C224F512GM40)
     #define BG22
     #include "BG22_porting.h"
