@@ -9,6 +9,9 @@
 
 #include "app.hpp"
 
+#ifdef NDEBUG
+#endif
+
 #ifdef NO_PINKTENS
     #pragma GCC warning "this project is Bluetens only"
 #endif
