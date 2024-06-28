@@ -84,41 +84,41 @@
 //****************************************************************
 //  <h>Pin PAD Pull
 //      <i> SYSCON->PIO_PULL_CFG[0~2]
-//      <o00>PA00       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o01>PA01       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o02>PA02       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o03>PA03       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o04>PA04       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o05>PA05       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o06>PA06       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o07>PA07       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o08>PA08       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o08>PA09       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o10>PA10       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o11>PA11       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o12>PA12       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o13>PA13       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o14>PA14       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o15>PA15       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o16>PA16       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o17>PA17       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o18>PA18       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o19>PA19       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o20>PA20       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o21>PA21       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o22>PA22 CDK   <0=>High-Z  <1=>Pull-Down(SWCLK) <2=>Pull-Up
-//      <o23>PA23 CDK   <0=>High-Z  <1=>Pull-Down(SWDIO) <2=>Pull-Up
-//      <o24>PA24       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o25>PA25       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o26>PA26       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o27>PA27       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o28>PA28       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o29>PA29       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o30>PA30       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o31>PA31       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o32>PB00       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o33>PB01       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o34>PB02       <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o00>PA00           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o01>PA01           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o02>PA02           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o03>PA03           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o04>PA04           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o05>PA05           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o06>PA06           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o07>PA07           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o08>PA08           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o08>PA09           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o10>PA10           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o11>PA11           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o12>PA12           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o13>PA13           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o14>PA14           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o15>PA15           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o16>PA16           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o17>PA17           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o18>PA18           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o19>PA19           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o20>PA20           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o21>PA21           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o22>PA22 CDK SWCLK <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o23>PA23 CDK SWDIO <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o24>PA24           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o25>PA25           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o26>PA26           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o27>PA27           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o28>PA28           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o29>PA29           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o30>PA30           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o31>PA31           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o32>PB00           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o33>PB01           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o34>PB02 Boot mode <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
     #define PA00_DEF_PAD_PULL           (1)
     #define PA01_DEF_PAD_PULL           (0)
     #define PA02_DEF_PAD_PULL           (0)
@@ -156,7 +156,7 @@
     #define PB02_DEF_PAD_PULL           (0)
 //  </h>
 //****************************************************************
-//  <h>Pin Driven Strength (Source 0.9mA / Sink 0.5mA RST)
+//  <h>Pin Driven Strength
 //      <i> SYSCON->PIO_DRV_CFG0[0~2]
 //      <o00>PA00
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
@@ -269,103 +269,31 @@
     #define PB01_DEF_DRV_STR            (0)
     #define PB02_DEF_DRV_STR            (0)
 //  </h>
-//  <e> Deep Sleep
+//****************************************************************
+//  <h> Peripheral Configure
+//      <h> PMU
+//          <q> Deep Sleep
     #define DEEP_SLEEP_ENABLED          (1)
-//      <e>RTC
-    #define DEEP_SLEEP_RTC_WAKEUP_BY_EN (0)
-//          <o0> Milliseconds
-    #define DEEP_SLEEP_WAKEUP_INTV      (500)
-//      </e>
-//      <h>Wakeup by GPIO
-//          <o00>PA00       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o01>PA01       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o02>PA02       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o03>PA03       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o04>PA04       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o05>PA05       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o06>PA06       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o07>PA07       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o08>PA08       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o08>PA09       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o10>PA10       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o11>PA11       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o12>PA12       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o13>PA13       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o14>PA14       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o15>PA15       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o16>PA16       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o17>PA17       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o18>PA18       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o19>PA19       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o20>PA20       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o21>PA21       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o22>PA22       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o23>PA23       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o24>PA24       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o25>PA25       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o26>PA26       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o27>PA27       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o28>PA28       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o29>PA29       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o30>PA30       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o31>PA31       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o32>PB00       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o33>PB01       <0=>Disabled    <1=>High-level    <2=>Low-level
-//          <o34>PB02       <0=>Disabled    <1=>High-level    <2=>Low-level
 //      </h>
-    #define PA00_WAKEUP_CFG             (0)
-    #define PA01_WAKEUP_CFG             (0)
-    #define PA02_WAKEUP_CFG             (0)
-    #define PA03_WAKEUP_CFG             (0)
-    #define PA04_WAKEUP_CFG             (0)
-    #define PA05_WAKEUP_CFG             (0)
-    #define PA06_WAKEUP_CFG             (0)
-    #define PA07_WAKEUP_CFG             (0)
-    #define PA08_WAKEUP_CFG             (0)
-    #define PA09_WAKEUP_CFG             (0)
-    #define PA10_WAKEUP_CFG             (0)
-    #define PA11_WAKEUP_CFG             (0)
-    #define PA12_WAKEUP_CFG             (0)
-    #define PA13_WAKEUP_CFG             (0)
-    #define PA14_WAKEUP_CFG             (0)
-    #define PA15_WAKEUP_CFG             (0)
-    #define PA16_WAKEUP_CFG             (0)
-    #define PA17_WAKEUP_CFG             (0)
-    #define PA18_WAKEUP_CFG             (0)
-    #define PA19_WAKEUP_CFG             (0)
-    #define PA20_WAKEUP_CFG             (0)
-    #define PA21_WAKEUP_CFG             (0)
-    #define PA22_WAKEUP_CFG             (0)
-    #define PA23_WAKEUP_CFG             (0)
-    #define PA24_WAKEUP_CFG             (0)
-    #define PA25_WAKEUP_CFG             (0)
-    #define PA26_WAKEUP_CFG             (0)
-    #define PA27_WAKEUP_CFG             (0)
-    #define PA28_WAKEUP_CFG             (0)
-    #define PA29_WAKEUP_CFG             (0)
-    #define PA30_WAKEUP_CFG             (0)
-    #define PA31_WAKEUP_CFG             (0)
-    #define PB00_WAKEUP_CFG             (0)
-    #define PB01_WAKEUP_CFG             (0)
-    #define PB02_WAKEUP_CFG             (0)
-//  </e>
-//  <h> BLE configuration
-//      <h> Advertising
-//          <o0> Minimum adv interval  * 1.25ms     <10-3200>
-//          <o1> Maximum adv interval  * 1.25ms     <10-3200>
-    #define BLUETOOTH_ADV_MIN_INTERVAL  (50)
-    #define BLUETOOTH_ADV_MAX_INTERVAL  (80)
-//      </h>
-//      <h> Peripheral Preferred Connection Parameters
-//          <o0> Minimum connection interval *1.25ms
-//          <o1> Maximum connection interval *1.25ms
-//          <o2> Slave latency
-//          <o3> Connection Supervision Timeout
+//      <h> BLE configuration
+//          <h> Advertising
+//              <o0> Minimum adv interval  * 1.25ms     <10-3200>
+//              <o1> Maximum adv interval  * 1.25ms     <10-3200>
+    #define BLUETOOTH_ADV_MIN_INTERVAL  (120)
+    #define BLUETOOTH_ADV_MAX_INTERVAL  (150)
+//          </h>
+//          <h> Peripheral Preferred Connection Parameters
+//              <o0> Minimum connection interval *1.25ms
+//              <o1> Maximum connection interval *1.25ms
+//              <o2> Slave latency
+//              <o3> Connection Supervision Timeout
     #define GAP_PPCP_CONN_INTV_MIN      (10)
     #define GAP_PPCP_CONN_INTV_MAX      (16)
     #define GAP_PPCP_CONN_LATENCY       (0)
     #define GAP_PPCP_CONN_TIMEOUT       (1600)
+//          </h>
 //      </h>
+//  </h>
 //<<< end of configuration section >>>
-///**************************************************************************
+//****************************************************************
 #endif
