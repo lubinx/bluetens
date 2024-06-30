@@ -59,7 +59,6 @@ __BEGIN_DECLS
     #define LOKI_SUPPORT_VERSION        (2)
 
 /// @override
-    // #undef NO_PRINT_LABEL
     // #undef DEFILE_RUNNING_NO_AD
     #undef NO_SHELL_DUMP
 

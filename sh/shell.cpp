@@ -202,19 +202,11 @@ void UCSH_startup_handle(struct UCSH_env *env)
         UCSH_printf(env,  "%s Shell v.%d.%d.%d\r\n", PROJECT_NAME,
             __MAJOR(PROJECT_VERSION), __MINOR(PROJECT_VERSION), __RELEASE(PROJECT_VERSION));
 
-#ifndef NO_PRINT_LABEL
         if (BDAddr)
             printf("id=%04X%02X%06X\r\n", BDAddr->NAP, BDAddr->UAP, BDAddr->LAP);
-#endif
+
         // show bat=val
         printf("bat=%d\r\n", App->Battery());
-
-        /*
-#if defined(DEBUG)
-        len = sprintf(env->buf, "prog=0x%x\r\n", FLASH_program_location());
-        puts(env->buf);
-#endif
-        */
     }
 }
 

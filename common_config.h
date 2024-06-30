@@ -12,7 +12,6 @@
     // #define NO_DET_CHARGING
     // #define NO_DET_BATTERY
 
-    // #define NO_PRINT_LABEL
     // #define NO_ADNAME_CHANGE
     // #define NO_SHELL_DUMP
 

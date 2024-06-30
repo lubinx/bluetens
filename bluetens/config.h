@@ -19,7 +19,6 @@ __BEGIN_DECLS
     #define CONSOLE_DEV                 QN_UART0
 
 /// @override
-    #undef NO_PRINT_LABEL
     #undef NO_ADNAME_CHANGE
     #undef NO_SHELL_DUMP
 
