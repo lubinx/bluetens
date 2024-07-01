@@ -817,7 +817,6 @@ void TApplication::MSG_PreloadBlock(uint32_t const)
 #ifndef NO_DET_HV_OUTPUT
     if (2 < TENS_context.LOAD_discharge_count)
     {
-
         if (0 == TENS_context.LOAD_ticking)
             TENS_context.LOAD_ticking = now;
 

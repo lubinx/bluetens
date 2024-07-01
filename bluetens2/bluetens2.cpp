@@ -92,7 +92,7 @@ void PLATFORM_init(void)
     // SYSCON_systick_precision(1);
 
     GPIO_setdir_input_pp(PULL_UP, PIN_POWER_BUTTON | PIN_ADD_BUTTON | PIN_SUB_BUTTON, true);
-    GPIO_setdir_input_pp(PULL_UP, PIN_CHARGING_DET, true);
+    GPIO_setdir_input_pp(PULL_UP, PIN_CHARGING_DET | PIN_HV_PULSE_DET, true);
     GPIO_setdir_input(PINKTENS_DET);
 
     GPIO_setdir_output(PUSH_PULL, PIN_LDO_POWER | PWM_PIN |
