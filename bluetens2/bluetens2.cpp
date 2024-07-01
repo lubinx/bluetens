@@ -9,9 +9,6 @@
 
 #include "app.hpp"
 
-#ifdef NDEBUG
-#endif
-
 #ifdef NO_PINKTENS
     #pragma GCC warning "this project is Bluetens only"
 #endif
@@ -92,6 +89,8 @@ static int INTENSITY_pwm = -1;
 ****************************************************************************/
 void PLATFORM_init(void)
 {
+    // SYSCON_systick_precision(1);
+
     GPIO_setdir_input_pp(PULL_UP, PIN_POWER_BUTTON | PIN_ADD_BUTTON | PIN_SUB_BUTTON, true);
     GPIO_setdir_input_pp(PULL_UP, PIN_CHARGING_DET, true);
     GPIO_setdir_input(PINKTENS_DET);
@@ -231,7 +230,7 @@ void INTENSITY_ctrl_release(uint32_t value)
     PWM_release(INTENSITY_pwm);
     INTENSITY_pwm = -1;
 
-    if (TApplication::stateRunning >= App->State())
+    if (! App->Shuttingdown() && TApplication::stateRunning >= App->State())
         LED_switch_indicator(LED_IND_POWER);
 }
 

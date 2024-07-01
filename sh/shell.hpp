@@ -16,6 +16,8 @@
     #define EOTA_CRC                    (10 /* + USER_ERRNO_BASE */)
     #define EOTA_PAYLOAD                (11 /* + USER_ERRNO_BASE */)
 
+
+    #define ENOENT_BLUETENS             (100)
     #define ECHO_OFF                    0xFFFF
 
 /***************************************************************************

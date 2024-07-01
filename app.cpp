@@ -8,6 +8,13 @@
 #include "app.hpp"
 #include "sh/shell.hpp"
 
+#ifdef NDEBUG
+    #if defined(DEBUG_LOKI_PARSER) || defined(NO_SHUTDOWN) || defined(NO_DET_HV_OUTPUT) || \
+        defined(NO_DET_CHARGING) || defined(NO_DET_BATTERY)
+        #pragma GCC error "remove debug definitions in common_config.h"
+    #endif
+#endif
+
 /**************************************************************************
  *  @const
  *************************************************************************/
@@ -35,7 +42,7 @@
 #endif
 
 #ifndef BATTERY_ADC_CALIB
-    #pragma GCC warn "no BATTERY_ADC_CALIB defined, default to 0"
+    #pragma GCC warning "no BATTERY_ADC_CALIB defined, default to 0"
     #define BATTERY_ADC_CALIB           (0)
 #endif
 
@@ -48,15 +55,16 @@ Bluetooth::BD_addr_t const *BDAddr;
 TApplication *App;
 TTensPeripheral *BLE;
 
-static uint32_t APP_STACK[STACK_SIZE_APP / sizeof(uint32_t)];
+static uint32_t __stack[STACK_SIZE_APP / sizeof(uint32_t)];
+
 /**************************************************************************
  *  @internal
  *************************************************************************/
 static char const *ManufactoryingFile = "test_50hz.lok";
-static bool Shuttingdown = false;
 
 struct TENS_context
 {
+    timeout_t PRELOAD_timeo;
     uint32_t IDLE_shutdown_timeout;
 
     clock_t TUV_POWER_ticking;
@@ -69,8 +77,6 @@ struct TENS_context
 };
 static struct TENS_context TENS_context;
 
-static void TIMER_output_callback(uint16_t id, void *arg, uint32_t loop);
-
 #ifndef NO_DET_BATTERY
     struct BATT_context
     {
@@ -78,9 +84,6 @@ static void TIMER_output_callback(uint16_t id, void *arg, uint32_t loop);
         ADC_attr_t attr;
     };
     static struct BATT_context BATT_context;
-
-    static void ADC_batt_callback(int volt, int raw, void *arg);
-    static void BATT_adc_intv_cb(void *arg);
 #endif
 
 /**************************************************************************
@@ -159,15 +162,12 @@ uint32_t INTENSITY_adjust(uint32_t value, int adjust)
 /**************************************************************************
  *  @TApplication
  *************************************************************************/
-static __attribute__((noreturn)) void *app_thread(void *arg)
-{
-    static_cast<TApplication *>(arg)->MessageLoop();
-}
-
 TApplication::TApplication() :
-    FState(stateStopped),
-    FIntensity(0),
-    FCurrFile(NULL), FRunningTickStart(0),
+    FManufactoringMode(false),
+    FState(stateStopped), FShuttingdown(false),
+    FLastActivity(0),
+    FRunningTickStart(0), FIntensity(0),
+    FCurrFile(NULL),
     FDefFiles(), FLastFileMd5(MD5_NULL),
     FBatt(0)
 {
@@ -182,6 +182,7 @@ TApplication::TApplication() :
         GPIO_debounce(PIN_POWER_BUTTON, GPIO_DEBOUNCE_INTV);
     #endif
 
+    timeout_init(&TENS_context.PRELOAD_timeo, 0, PRELOAD_timeo_callback, 0);
     TENS_context.IDLE_shutdown_timeout = SHUTDOWN_IDLE_SECONDS * 1000;
     TENS_context.LOAD_det_timeout = LOAD_DET_TIMEOUT;
 
@@ -194,9 +195,9 @@ TApplication::TApplication() :
     {
         pthread_attr_t attr;
         pthread_attr_init(&attr);
-        pthread_attr_setstack(&attr, APP_STACK, sizeof(APP_STACK));
+        pthread_attr_setstack(&attr, __stack, sizeof(__stack));
 
-        pthread_create(&FThreadId, &attr, app_thread, this);
+        pthread_create(&FThreadId, &attr, MessageLoopThreadEntry, this);
         pthread_attr_destroy(&attr);
     }
 }
@@ -267,13 +268,13 @@ void TApplication::Shutdown(void)
 
 void TApplication::GPIO_callback(uint32_t pins)
 {
-    if (Shuttingdown)
+    if (FShuttingdown)
         while (1) NVIC_SystemReset();
 
 #ifdef PIN_POWER_BUTTON
     if (PIN_POWER_BUTTON == (PIN_POWER_BUTTON & pins))
     {
-        Shuttingdown = true;
+        FShuttingdown = true;
         FMsgQueue.PostMessage(MSG_SHUTDOWN, 0);
     }
 #endif
@@ -285,7 +286,7 @@ void TApplication::GPIO_callback(uint32_t pins)
         {
             USB_plugin();
 
-            Shuttingdown = true;
+            FShuttingdown = true;
             FMsgQueue.PostMessage(MSG_STOPPING, stopCharging);
         }
     }
@@ -350,7 +351,10 @@ int TApplication::StartFile(char const *filename, uint32_t cutoff_seconds)
     {
         FCurrFile = new TLokiParser();
         if (! FCurrFile)
+        {
+            Stop();
             return ENOMEM;
+        }
 
         int fd = FCurrFile->Open(filename);
         if (-1 == fd)
@@ -358,7 +362,8 @@ int TApplication::StartFile(char const *filename, uint32_t cutoff_seconds)
             delete FCurrFile;
             FCurrFile = NULL;
 
-            return errno;
+            Stop();
+            return ENOENT_BLUETENS;
         }
         else
             FLastFileMd5 = file_md5(fd);
@@ -372,7 +377,6 @@ int TApplication::StartFile(char const *filename, uint32_t cutoff_seconds)
 
         FCutoffSeconds = cutoff_seconds;
         FCurrBlock.Repeat(0);
-
         FMsgQueue.PostMessage(MSG_STARTING, INTENSITY_adjust(0, 1));
 
     #ifdef DEFILE_USING_LAST_RUNNING
@@ -447,39 +451,6 @@ int TApplication::UpdateDefaultFile(uint8_t idx, char const *filename)
         return EINVAL;
 }
 
-void TApplication::UpdateBattery(uint32_t value)
-{
-#ifndef NO_DET_BATTERY
-    static clock_t noti_tick = 0;
-
-    if (! DET_is_charging())
-    {
-        if (stateLowBattery != FState && value < BATTERY_EMPTY_VOLTAGE)
-        {
-            Shuttingdown = true;
-            FState = stateLowBattery;
-
-            FMsgQueue.PostMessage(MSG_STOPPING, stopLowBattery);
-        }
-
-        if (FBatt > 0)
-        {
-            clock_t now = clock();
-
-            if (now - noti_tick > BATTERY_NOTI_TIMEOUT)
-            {
-                FMsgQueue.PostMessage(MSG_NOTIFY_BATTERY, value);
-                noti_tick = now;
-            }
-        }
-    }
-
-    FBatt = value;
-#else
-    ARG_UNUSED(value);
-#endif
-}
-
 void TApplication::UpdateLastActivity(uint32_t MsgId)
 {
     PLATFORM_msg_activity(MsgId);
@@ -548,18 +519,18 @@ void TApplication::Idle(void)
 void TApplication::MSG_Startup(uint32_t const)
 {
     /// @battery detect
-#ifndef NO_DET_BATTERY
-    ADC_attr_init(&BATT_context.attr, 1000, ADC_batt_callback);
-    ADC_attr_positive_input(&BATT_context.attr, PIN_BATT);
+    #ifndef NO_DET_BATTERY
+        ADC_attr_init(&BATT_context.attr, 1000, BATT_adc_callback);
+        ADC_attr_positive_input(&BATT_context.attr, PIN_BATT);
 
-    #ifdef BATT_NUMERATOR
-        ADC_attr_scale(&BATT_context.attr, BATT_NUMERATOR, BATT_DENOMINATOR);
+        #ifdef BATT_NUMERATOR
+            ADC_attr_scale(&BATT_context.attr, BATT_NUMERATOR, BATT_DENOMINATOR);
+        #endif
+        ADC_start_convert(&BATT_context.attr, this);
+
+        timeout_init(&BATT_context.intv, BATTERY_DET_TIMEOUT, BATT_intv_callback, TIMEOUT_FLAG_REPEAT);
+        timeout_start(&BATT_context.intv, this);
     #endif
-    ADC_start_convert(&BATT_context.attr, this);
-
-    timeout_init(&BATT_context.intv, BATTERY_DET_TIMEOUT, BATT_adc_intv_cb, TIMEOUT_FLAG_REPEAT);
-    timeout_start(&BATT_context.intv, this);
-#endif
 
     if (PLATFORM_startup())
     {
@@ -599,20 +570,20 @@ void TApplication::MSG_Startup(uint32_t const)
         }
 #endif
 
-#ifndef NO_PRINT_LABEL
         /// @device id
         while (! BLE->GAP_IsReady())
             msleep(10);
         BDAddr = BLE->BDAddr();
 
-    #ifdef DUTCH_SHUTDOWN_IDLE_SECONDS
-        if (IS_DUTCH_DEVICE())
-        {
-            TENS_context.IDLE_shutdown_timeout = DUTCH_SHUTDOWN_IDLE_SECONDS * 1000;
-            TENS_context.LOAD_det_timeout = DUTCH_LOAD_DET_TIMEOUT;
-        }
-    #endif
-#endif
+        // dutch device start with BDAddr 0x087CEE
+        #ifdef DUTCH_SHUTDOWN_IDLE_SECONDS
+            if (IS_DUTCH_DEVICE())
+            {
+                TENS_context.IDLE_shutdown_timeout = DUTCH_SHUTDOWN_IDLE_SECONDS * 1000;
+                TENS_context.LOAD_det_timeout = DUTCH_LOAD_DET_TIMEOUT;
+            }
+        #endif
+
         BLE->ADV_Start();
 
         /// @SHELL init & startup
@@ -624,7 +595,7 @@ void TApplication::MSG_Startup(uint32_t const)
 
 void TApplication::MSG_Shutdown(uint32_t const)
 {
-    Shuttingdown = true;
+    FShuttingdown = true;
 
 #ifndef NO_DET_BATTERY
     ADC_stop_convert(&BATT_context.attr);
@@ -739,7 +710,7 @@ void TApplication::MSG_Stopping(uint32_t const reason)
     };
 
 #ifdef DEFILE_RUNNING_NO_AD
-    if (! Shuttingdown && ! BLE->IsConnected())
+    if (! FShuttingdown && ! BLE->IsConnected())
             BLE->ADV_Start();
 #endif
 }
@@ -868,8 +839,8 @@ void TApplication::MSG_PreloadBlock(uint32_t const)
     }
     else
     {
-        msleep(0); // schedule all other task
-        FMsgQueue.PostMessage(MSG_PRELOAD_BLOCK, 0);
+        // scheduing MSG_PreloadBlock() yield to main thread idle
+        timeout_start(&TENS_context.PRELOAD_timeo, this);
     }
 }
 
@@ -900,7 +871,17 @@ void TApplication::MSG_NotifyBattery(uint32_t const val)
 /**************************************************************************
  *  @internal
  *************************************************************************/
-static void TIMER_output_callback(uint16_t id, void *arg, uint32_t loop)
+void *TApplication::MessageLoopThreadEntry(void *arg)
+{
+    static_cast<TApplication *>(arg)->MessageLoop();
+}
+
+void TApplication::PRELOAD_timeo_callback(void *arg)
+{
+    static_cast<TApplication *>(arg)->FMsgQueue.PostMessage(MSG_PRELOAD_BLOCK, 0);
+}
+
+void TApplication::TIMER_output_callback(uint16_t id, void *arg, uint32_t loop)
 {
     switch (id)
     {
@@ -956,17 +937,51 @@ TIMER_SPIN:
     }
 }
 
-#ifndef NO_DET_BATTERY
-static void BATT_adc_intv_cb(void *arg)
+void TApplication::BATT_intv_callback(void *arg)
 {
+#ifndef NO_DET_BATTERY
     ADC_start_convert(&BATT_context.attr, arg);
+#else
+    ARG_UNUSED(arg);
+#endif
 }
 
-static void ADC_batt_callback(int volt, int raw, void *arg)
+void TApplication::BATT_adc_callback(int volt, int raw, void *arg)
 {
     ARG_UNUSED(raw);
+
+#ifndef NO_DET_BATTERY
+    static clock_t noti_tick = 0;
     ADC_stop_convert(&BATT_context.attr);
 
-    ((TApplication *)arg)->UpdateBattery((uint32_t)volt + BATTERY_ADC_CALIB);
-}
+    TApplication *self = static_cast<TApplication *>(arg);
+    volt += BATTERY_ADC_CALIB;
+
+    if (! DET_is_charging())
+    {
+        if (stateLowBattery != self->FState && volt < BATTERY_EMPTY_VOLTAGE)
+        {
+            self->FShuttingdown = true;
+            self->FState = stateLowBattery;
+
+            self->FMsgQueue.PostMessage(MSG_STOPPING, stopLowBattery);
+        }
+
+        if (self->FBatt > 0)
+        {
+            clock_t now = clock();
+
+            if (now - noti_tick > BATTERY_NOTI_TIMEOUT)
+            {
+                self->FMsgQueue.PostMessage(MSG_NOTIFY_BATTERY, volt);
+                noti_tick = now;
+            }
+        }
+    }
+
+    self->FBatt = volt;
+#else
+    ARG_UNUSED(volt, arg);
 #endif
+}
+

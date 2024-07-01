@@ -63,8 +63,8 @@ public:     // type
 public:
     TApplication();
 
-    void MessageLoop(void) __attribute__((noreturn));
     void Run(void);
+    void UpdateLastActivity(uint32_t MsgId = 0);
 
     void Shutdown(void);
     void GPIO_callback(uint32_t pins);
@@ -80,10 +80,9 @@ public:
         { return idx < DEF_FILE_COUNT ? FDefFiles[idx] : NULL; }
     int UpdateDefaultFile(uint8_t idx, char const *filename);
 
-    void UpdateBattery(uint32_t value);
-    void UpdateLastActivity(uint32_t MsgId = 0);
-
 public:     // properties
+    bool Shuttingdown() const
+        { return FShuttingdown; }
     enum state_t State() const
         { return FState; }
 
@@ -105,25 +104,27 @@ private:
 
 private:
     pthread_t FThreadId;
-    clock_t FLastActivity;
-    TMessageQueue FMsgQueue;
-
     bool FManufactoringMode;
     enum state_t FState;
-    uint32_t FIntensity;
+    bool FShuttingdown;
 
+    TMessageQueue FMsgQueue;
+    clock_t FLastActivity;
+
+    clock_t FRunningTickStart;
+    uint32_t FIntensity;
     TLokiParser *FCurrFile;
     TLokiBlockParams FCurrBlock;
     uint32_t FCutoffSeconds;
-
-    clock_t FRunningTickStart;
 
     char FDefFiles[DEF_FILE_COUNT][NVM_DEF_FILE_SIZE];
     MD5_t FLastFileMd5;
 
     volatile int FBatt;
 
-private:    // message handler
+private:    // messages
+    void MessageLoop(void) __attribute__((noreturn));
+
     void MSG_Startup(uint32_t const);
     void MSG_Shutdown(uint32_t const);
 
@@ -136,7 +137,15 @@ private:    // message handler
 
     void MSG_NotifyIntensity(uint32_t const value);
     void MSG_NotifyBattery(uint32_t const);
-    void MSG_NotifyLowBattery(uint32_t const);
+
+private:    // static
+    static void *MessageLoopThreadEntry(void *arg);
+
+    static void PRELOAD_timeo_callback(void *arg);
+    static void TIMER_output_callback(uint16_t id, void *arg, uint32_t loop);
+
+    static void BATT_intv_callback(void *arg);
+    static void BATT_adc_callback(int volt, int raw, void *arg);
 };
 extern TApplication *App;
 
