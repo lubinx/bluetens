@@ -23,8 +23,16 @@
 #endif
 
     #define INTENSITY_STEP_TIMEOUT      (150)
-    #define BATTERY_DET_TIMEOUT         (15 * 1000)
-    #define BATTERY_NOTI_TIMEOUT        (5 * 60 * 1000)
+
+    #ifndef DEBUG
+        // interval to notification battery (UART & BLE)
+        #define BATTERY_NOTI_INTV       (5 * 60 * 1000)
+        // interval to detect battery for low-battery
+        #define BATTERY_DET_INTV        (60 * 1000)
+    #else
+        // DEBUG: always detect & notify battery every 5 seconds
+        #define BATTERY_DET_INTV        (5 * 1000)
+    #endif
 
     /// @DUTY section
     #define DUTY_SECTION_ID             (0x10)
@@ -528,7 +536,7 @@ void TApplication::MSG_Startup(uint32_t const)
         #endif
         ADC_start_convert(&BATT_context.attr, this);
 
-        timeout_init(&BATT_context.intv, BATTERY_DET_TIMEOUT, BATT_intv_callback, TIMEOUT_FLAG_REPEAT);
+        timeout_init(&BATT_context.intv, BATTERY_DET_INTV, BATT_intv_callback, TIMEOUT_FLAG_REPEAT);
         timeout_start(&BATT_context.intv, this);
     #endif
 
@@ -597,9 +605,9 @@ void TApplication::MSG_Shutdown(uint32_t const)
 {
     FShuttingdown = true;
 
-#ifndef NO_DET_BATTERY
-    ADC_stop_convert(&BATT_context.attr);
-#endif
+    #ifndef NO_DET_BATTERY
+        ADC_stop_convert(&BATT_context.attr);
+    #endif
 
     if (stateRunning == FState || stateStarting == FState)
         MSG_Stopping(stopShutdown);
@@ -950,11 +958,22 @@ void TApplication::BATT_adc_callback(int volt, int raw, void *arg)
     ARG_UNUSED(raw);
 
 #ifndef NO_DET_BATTERY
-    static clock_t noti_tick = 0;
     ADC_stop_convert(&BATT_context.attr);
 
     TApplication *self = static_cast<TApplication *>(arg);
     volt += BATTERY_ADC_CALIB;
+
+    #ifdef DEBUG
+        self->FMsgQueue.PostMessage(MSG_NOTIFY_BATTERY, volt);
+    #endif
+
+    // REVIEW: BUG QN908X running high-load, interference batt det ADC
+    #ifdef QN908X
+        if (0 != GPIO_peek(PIN_LDO_POWER))
+        {
+            return;
+        }
+    #endif
 
     if (! DET_is_charging())
     {
@@ -966,22 +985,23 @@ void TApplication::BATT_adc_callback(int volt, int raw, void *arg)
             self->FMsgQueue.PostMessage(MSG_STOPPING, stopLowBattery);
         }
 
-        if (self->FBatt > 0)
-        {
-            clock_t now = clock();
+        #ifndef DEBUG
+            if (self->FBatt > 0)
+            {
+                static clock_t noti_tick = 0;
+                clock_t now = clock();
 
-                if (now - noti_tick > BATTERY_NOTI_TIMEOUT)
+                if (now - noti_tick > BATTERY_NOTI_INTV)
                 {
                     self->FMsgQueue.PostMessage(MSG_NOTIFY_BATTERY, volt);
                     noti_tick = now;
                 }
             }
-        }
-        */
+        #endif
+    }
 
     self->FBatt = volt;
 #else
     ARG_UNUSED(volt, arg);
 #endif
 }
-
