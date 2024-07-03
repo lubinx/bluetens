@@ -970,13 +970,14 @@ void TApplication::BATT_adc_callback(int volt, int raw, void *arg)
         {
             clock_t now = clock();
 
-            if (now - noti_tick > BATTERY_NOTI_TIMEOUT)
-            {
-                self->FMsgQueue.PostMessage(MSG_NOTIFY_BATTERY, volt);
-                noti_tick = now;
+                if (now - noti_tick > BATTERY_NOTI_TIMEOUT)
+                {
+                    self->FMsgQueue.PostMessage(MSG_NOTIFY_BATTERY, volt);
+                    noti_tick = now;
+                }
             }
         }
-    }
+        */
 
     self->FBatt = volt;
 #else

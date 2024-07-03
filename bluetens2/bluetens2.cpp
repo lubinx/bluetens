@@ -95,7 +95,7 @@ void PLATFORM_init(void)
     GPIO_setdir_input_pp(PULL_UP, PIN_CHARGING_DET | PIN_HV_PULSE_DET, true);
     GPIO_setdir_input(PINKTENS_DET);
 
-    GPIO_setdir_output(PUSH_PULL, PIN_LDO_POWER | PWM_PIN |
+    GPIO_setdir_output(PUSH_PULL_DOWN, PIN_LDO_POWER | PWM_PIN |
         PIN_OUT1 | PIN_OUT2 | PIN_OUT3 | PIN_OUT4 |
         PIN_HV_CTRL | PIN_ASY_CTL);
 
