@@ -20,10 +20,10 @@
     #define PIN_ADD_BUTTON              PA03
 
 /// @batt
-    #define PORT_BATT                   (GPIO0)
     #define PIN_BATT                    (PB02)
     #define BATT_NUMERATOR              (970)
     #define BATT_DENOMINATOR            (220)
+    #define BATTERY_ADC_CALIB           (0)
 
 /// @PWM
     #define PWM_PIN                     PC07

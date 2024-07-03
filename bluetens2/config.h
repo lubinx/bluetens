@@ -63,7 +63,6 @@ __BEGIN_DECLS
     #undef NO_SHELL_DUMP
 
 /// @battery override
-    #define BATTERY_ADC_CALIB           (0)
     #undef BATTERY_LOW_VOLTAGE
     #define BATTERY_LOW_VOLTAGE         (3100)
 

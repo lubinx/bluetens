@@ -9,12 +9,5 @@
 		{
 			"path": "../efr32xg22"
 		}
-	],
-	"settings": {
-		"files.associations": {
-			"ble_config.h": "c",
-			"qn908x_config.h": "c",
-			"sema.h": "c"
-		}
-	}
+	]
 }
