@@ -8,13 +8,6 @@
 #include "app.hpp"
 #include "sh/shell.hpp"
 
-#ifdef NDEBUG
-    #if defined(DEBUG_LOKI_PARSER) || defined(NO_SHUTDOWN) || defined(NO_DET_HV_OUTPUT) || \
-        defined(NO_DET_CHARGING) || defined(NO_DET_BATTERY)
-        #pragma GCC error "remove debug definitions in common_config.h"
-    #endif
-#endif
-
 /**************************************************************************
  *  @const
  *************************************************************************/

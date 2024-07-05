@@ -1,18 +1,29 @@
 #ifndef __COMMON_CONFIG_H
 #define __COMMON_CONFIG_H               1
 
+#include <features.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include <ultracore/nvm.h>
 
-// #define HW_DEBUG
+// NOTE: debug running
     // #define DEBUG_LOKI_PARSER
-    // #define NO_SHUTDOWN
-    // #define NO_DET_HV_OUTPUT
+    #define NO_SHUTDOWN
+    #define NO_DET_HV_OUTPUT
     // #define NO_DET_CHARGING
     // #define NO_DET_BATTERY
 
-    // #define NO_ADNAME_CHANGE
+#ifdef NDEBUG
+    #undef DEBUG_LOKI_PARSER
+    #undef NO_SHUTDOWN
+    #undef NO_DET_HV_OUTPUT
+    #undef NO_DET_CHARGING
+    #undef NO_DET_BATTERY
+#endif
+
+/* v1 change bluetooth name */
+    #define NO_ADNAME_CHANGE
+/* v1 no enough FLASH spaces */
     // #define NO_SHELL_DUMP
 
 /** @override in config.h @GPIO debounce & hold to repeat */
@@ -52,9 +63,6 @@
 
     // fitsuit
     #define NVM_STORED_INTENSITY_ID     (NVM_USER_ID_BASE + 0x100)
-
-#include <features.h>
-#include <stdint.h>
 
 __BEGIN_DECLS
 extern __attribute__((nothrow))

@@ -22,7 +22,7 @@
 /***************************************************************************/
 /** @internal
 ****************************************************************************/
-static int SHELL_bdname(struct UCSH_env *env);
+static int SHELL_bdname(struct UCSH_env *env) __attribute__((used));
 static int SHELL_battery(struct UCSH_env *env);
 
 static int BATT_compat_transform(int val);
