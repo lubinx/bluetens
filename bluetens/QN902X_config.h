@@ -65,25 +65,25 @@
     #define BLE_CLK_VAL                 (16000000)
 //  </h>
 //  <h> Pin Mutex
-//      <o00> P00 (GPIO / UART0.TXD /SPI0.Data.Out / RTCI)
+//      <o0> P00 (GPIO / UART0.TXD /SPI0.Data.Out / RTCI)
 //          <0=> GPIO0.0    <1=> UART0.TXD  <2=> SPI0.Data.Out    <3=> RTCI
-//      <o01> P01 (GPIO / SPI0.CS0 / UART0.CTS)
+//      <o1> P01 (GPIO / SPI0.CS0 / UART0.CTS)
 //          <0=> GPIO0.1    <2=> SPI0.CS0   <3=> UART0.CTS
-//      <o02> P02 (GPIO / I2C.SDA / SPI0.CLK / UART0.RTS)
+//      <o2> P02 (GPIO / I2C.SDA / SPI0.CLK / UART0.RTS)
 //          <0=> GPIO0.2    <1=> I2C.SDA    <2=> SPI0.CLK   <3=> UART0.RTS
-//      <o03> P03 (GPIO / RADIO.EN / CLKOUT0 / TIMER0.External.CLK)
+//      <o3> P03 (GPIO / RADIO.EN / CLKOUT0 / TIMER0.External.CLK)
 //          <0=> GPIO0.3    <1=> RADIO.EN   <2=> CLKOUT0<3=> TIMER0.External.CLK
-//      <o04> P04 (GPIO / CLKOUT1 / RTCI)
+//      <o4> P04 (GPIO / CLKOUT1 / RTCI)
 //          <0=> GPIO0.4                    <2=> CLKOUT1    <3=> RTCI
-//      <o05> P05 (GPIO / I2C.SCL / ADC Tigger / ACMP1_0)
+//      <o5> P05 (GPIO / I2C.SCL / ADC Tigger / ACMP1_0)
 //          <0=> GPIO0.5    <1=> I2C.SCL    <2=> ADC Tigger <3=> ACMP1_O
-//      <o06> P06 (SW.DAT / GPIO / AIN2/ACMP1+)
+//      <o6> P06 (SW.DAT / GPIO / AIN2/ACMP1+)
 //          <0=> SW.DAT     <1=> GPIO0.6    <2=> AIN2       <3=> ACMP1+
-//      <o07> P07 (SW.CLK / GPIO / AIN3 / ACMP1-)
+//      <o7> P07 (SW.CLK / GPIO / AIN3 / ACMP1-)
 //          <0=> SW.CLK     <1=> GPIO0.7    <2=> AIN3       <3=> ACMP1-
-//      <o08> P10 (GPIO / SPI1.Data.In / UART1 / ACMP1-)
+//      <o8> P10 (GPIO / SPI1.Data.In / UART1 / ACMP1-)
 //          <0=> GPIO1.0    <1=> SPI1.Data.In <2=> UART1.RXD <3=> ACMP1-
-//      <o09> P11 (GPIO / SPI1.Data.Out / UART1.TXD / TIMER1.ICP0)
+//      <o9> P11 (GPIO / SPI1.Data.Out / UART1.TXD / TIMER1.ICP0)
 //          <0=> GPIO1.1    <1=> SPI1.Data.Out <2=> UART1.TXD <3=> TIMER1.ICP0
 //      <o10> P12 (GPIO / SPI1.CS0 / UART1.CTS / ADC Tigger)
 //          <0=> GPIO1.2    <1=> SPI1.CS0   <2=> UART1.CTS  <3=> ADC Tigger
@@ -160,25 +160,25 @@
     #define PIN36_FUNC_SEL              (0)
 //  </h>
 //  <h> Pin Input Gatting & Output Push-Pull
-//      <o00> P00
+//      <o0> P00
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o01> P01
+//      <o1> P01
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o02> P02
+//      <o2> P02
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o03> P03
+//      <o3> P03
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o04> P04
+//      <o4> P04
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o05> P05
+//      <o5> P05
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o06> P06
+//      <o6> P06
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o07> P07
+//      <o7> P07
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o08> P10
+//      <o8> P10
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
-//      <o09> P11
+//      <o9> P11
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
 //      <o10> P12
 //          <0=> HIGH-Z     <1=> PULL-DOWN      <2=> PULL-UP
@@ -255,16 +255,16 @@
     #define PIN36_PAD_PULL              (2)
 //  </h>
 //  <h> Pin High Driven
-//      <q00> P00
-//      <q01> P01
-//      <q02> P02
-//      <q03> P03
-//      <q04> P04
-//      <q05> P05
-//      <q06> P06
-//      <q07> P07
-//      <q08> P10
-//      <q09> P11
+//      <q0> P00
+//      <q1> P01
+//      <q2> P02
+//      <q3> P03
+//      <q4> P04
+//      <q5> P05
+//      <q6> P06
+//      <q7> P07
+//      <q8> P10
+//      <q9> P11
 //      <q10> P12
 //      <q11> P13
 //      <q12> P14

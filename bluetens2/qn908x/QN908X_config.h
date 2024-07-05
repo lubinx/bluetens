@@ -82,43 +82,42 @@
 //      </h>
 //  </h>
 //****************************************************************
-//  <h>Pin PAD Pull
-//      <i> SYSCON->PIO_PULL_CFG[0~2]
-//      <o00>PA00           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o01>PA01           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o02>PA02           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o03>PA03           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o04>PA04           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o05>PA05           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o06>PA06           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o07>PA07           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o08>PA08           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o08>PA09           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o10>PA10           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o11>PA11           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o12>PA12           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o13>PA13           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o14>PA14           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o15>PA15           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o16>PA16           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o17>PA17           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o18>PA18           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o19>PA19           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o20>PA20           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o21>PA21           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o22>PA22 CDK SWCLK <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o23>PA23 CDK SWDIO <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o24>PA24           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o25>PA25           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o26>PA26           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o27>PA27           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o28>PA28           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o29>PA29           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o30>PA30           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o31>PA31           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o32>PB00           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o33>PB01           <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
-//      <o34>PB02 Boot mode <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//  <h>Pin PAD Pull (SYSCON->PIO_PULL_CFG[0~2])
+//      <o0>PA00            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o1>PA01            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o2>PA02            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o3>PA03            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o4>PA04            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o5>PA05            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o6>PA06            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o7>PA07            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o8>PA08            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o9>PA09            <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o10> PA10          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o11> PA11          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o12> PA12          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o13> PA13          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o14> PA14          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o15> PA15          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o16> PA16          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o17> PA17          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o18> PA18          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o19> PA19          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o20> PA20          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o21> PA21          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o22> PA22 SWCLK    <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o23> PA23 SWDIO    <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o24> PA24          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o25> PA25          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o26> PA26          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o27> PA27          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o28> PA28          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o29> PA29          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o30> PA30          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o31> PA31          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o32> PB00          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o33> PB01          <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
+//      <o34> PB02 Boot SEL <0=>High-Z  <1=>Pull-Down   <2=>Pull-Up
     #define PA00_DEF_PAD_PULL           (1)
     #define PA01_DEF_PAD_PULL           (0)
     #define PA02_DEF_PAD_PULL           (0)
@@ -158,26 +157,26 @@
 //****************************************************************
 //  <h>Pin Driven Strength
 //      <i> SYSCON->PIO_DRV_CFG0[0~2]
-//      <o00>PA00
+//      <o0>PA00
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o01>PA01
+//      <o1>PA01
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o02>PA02
+//      <o2>PA02
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o03>PA03
+//      <o3>PA03
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o04>PA04
+//      <o4>PA04
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o05>PA05
+//      <o5>PA05
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o06>PA06 (EXTRA)
+//      <o6>PA06 (EXTRA)
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
 //          <2=>Source 9.4mA / Sink 0.5mA   <3=>Source 12.2mA / Sink 2.1mA
-//      <o07>PA07
+//      <o7>PA07
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o08>PA08
+//      <o8>PA08
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-//      <o09>PA09
+//      <o9>PA09
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
 //      <o10>PA10
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
@@ -241,10 +240,10 @@
     #define PA05_DEF_DRV_STR            (0)
     #define PA06_DEF_DRV_STR            (0)
     #define PA07_DEF_DRV_STR            (0)
-    #define PA08_DEF_DRV_STR            (0)
-    #define PA09_DEF_DRV_STR            (0)
-    #define PA10_DEF_DRV_STR            (0)
-    #define PA11_DEF_DRV_STR            (0)
+    #define PA08_DEF_DRV_STR            (1)
+    #define PA09_DEF_DRV_STR            (1)
+    #define PA10_DEF_DRV_STR            (1)
+    #define PA11_DEF_DRV_STR            (1)
     #define PA12_DEF_DRV_STR            (0)
     #define PA13_DEF_DRV_STR            (0)
     #define PA14_DEF_DRV_STR            (0)
