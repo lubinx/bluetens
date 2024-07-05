@@ -960,14 +960,6 @@ void TApplication::BATT_adc_callback(int volt, int raw, void *arg)
         self->FMsgQueue.PostMessage(MSG_NOTIFY_BATTERY, volt);
     #endif
 
-    // REVIEW: BUG QN908X running high-load, interference batt det ADC
-    #ifdef QN908X
-        if (0 != GPIO_peek(PIN_LDO_POWER))
-        {
-            return;
-        }
-    #endif
-
     if (! DET_is_charging())
     {
         if (stateLowBattery != self->FState && volt < BATTERY_EMPTY_VOLTAGE)

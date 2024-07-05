@@ -233,12 +233,12 @@
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
 //      <o34>PB02
 //          <0=>Source 0.9mA / Sink 0.5mA   <1=>Source 3.7mA / Sink 2.1mA
-    #define PA00_DEF_DRV_STR            (0)
+    #define PA00_DEF_DRV_STR            (1)
     #define PA01_DEF_DRV_STR            (1)
     #define PA02_DEF_DRV_STR            (1)
     #define PA03_DEF_DRV_STR            (1)
     #define PA04_DEF_DRV_STR            (1)
-    #define PA05_DEF_DRV_STR            (1)
+    #define PA05_DEF_DRV_STR            (0)
     #define PA06_DEF_DRV_STR            (0)
     #define PA07_DEF_DRV_STR            (0)
     #define PA08_DEF_DRV_STR            (0)
