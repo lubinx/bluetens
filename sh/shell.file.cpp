@@ -82,7 +82,11 @@ int UCSH_cat(struct UCSH_env *env)
 
     while (size > 0)
     {
-        retval = read(env->fd, env->buf, size > 64  ? 64 : size);
+        if (-1 == (retval = read(env->fd, env->buf, size > 64  ? 64 : size)))
+        {
+            retval = 0; // REVIEW: timedout is not a error
+            break;
+        }
 
         App->UpdateLastActivity();
         FILE_downloading();
