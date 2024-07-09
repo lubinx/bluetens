@@ -1,39 +1,39 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug QN908X bluetens",
+      "type": "cppdbg",
+      "request": "launch",
+      "miDebuggerServerAddress": "127.0.0.1:2331",
+      "program": "${workspaceFolder}/build/qn908x_bluetens.elf",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "MIMode": "gdb",
+      "miDebuggerPath": "${userHome}/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb",
+      "stopAtConnect": true,
+      "setupCommands": [
         {
-            "name": "Debug QN908X bluetens",
-            "type": "cppdbg",
-            "request": "launch",
-            "miDebuggerServerAddress": "127.0.0.1:2331",
-            "program": "${workspaceFolder}/build/qn908x_bluetens.elf",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "MIMode": "gdb",
-            "miDebuggerPath": "${userHome}/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb",
-            "stopAtConnect": true,
-            "setupCommands": [
-                {
-                    "text": "-enable-pretty-printing",
-                }
-            ],
-            "postRemoteConnectCommands": [
-                {
-                    "text": "set mem inaccessible-by-default off"
-                },
-                {
-                    "text": "monitor reset"
-                },
-                {
-                    "text": "load"
-                },
-            ],
-            "svdPath": "../qn908x/svd/qn908XC.svd",
+          "text": "-enable-pretty-printing",
+        }
+      ],
+      "postRemoteConnectCommands": [
+        {
+          "text": "set mem inaccessible-by-default off"
         },
-    ]
+        {
+          "text": "monitor reset"
+        },
+        {
+          "text": "load"
+        },
+      ],
+      "svdPath": "../qn908x/svd/qn908XC.svd",
+    },
+  ]
 }

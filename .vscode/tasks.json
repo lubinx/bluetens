@@ -23,7 +23,7 @@
     {
       "label": "Release build",
       "type": "shell",
-      "command": "cmake -B./build -DCMAKE_BUILD_TYPE=MinSizeRel -GNinja && ninja -C./build",
+      "command": "cmake -B./build -DCMAKE_BUILD_TYPE=Release -GNinja && ninja -C./build",
       "group": {
         "kind": "build"
       },
