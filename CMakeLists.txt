@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 include(".vscode/intro.cmake")
 project(bluetens)
 
+# FIXME: somehow QN908X can't pass -O3,-DCMAKE_BUILD_TYPE=Release
 build_target(QN908X_bluetens
     DEVICE
         "QN908X"
