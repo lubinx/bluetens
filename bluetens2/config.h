@@ -76,10 +76,14 @@ __BEGIN_DECLS
 static inline
     bool DET_is_pinktens(void)
     {
-    #if defined(NO_PINKTENS)
-        return false;
+    #if ! defined(NO_PINKTENS)
+        GPIO_setdir_input_pp(PULL_UP, PINKTENS_DET, true);
+
+        bool retval = 0 != GPIO_peek(PINKTENS_DET);
+        GPIO_disable(PINKTENS_DET);
+        return retval;
     #else
-        return 0 != GPIO_peek(PINKTENS_DET);
+        return false;
     #endif
     }
 
