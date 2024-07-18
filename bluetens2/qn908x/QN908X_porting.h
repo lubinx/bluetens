@@ -31,7 +31,7 @@
     #define BATTERY_ADC_CALIB           (50)
 
 /// @PWM
-    #define PWM_PIN                     PA00
+    #define PIN_VOLT_PWM                PA00
     #define PIN_LDO_POWER               PA06
 
 /// @outputs

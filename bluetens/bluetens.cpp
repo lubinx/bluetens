@@ -13,7 +13,7 @@
 #define WDOG_feed()                     (QN_WDT->LOAD = 32879 * 3)
 
 #define PWM_FREQ                        (16000000)
-#define PWM_PIN                         (P15)
+#define PIN_VOLT_PWM                    (P15)
 
 static uint16_t const INTENSITY_table[] =
 {
@@ -119,12 +119,12 @@ void PLATFORM_init(void)
     GPIO_set(PIN_POWER_LED |
         PIN_STR_LED1 | PIN_STR_LED2 | PIN_STR_LED3 | PIN_STR_LED4 |
         PIN_RESISTANT);
-    GPIO_setdir_output(PUSH_PULL, PIN_POWER_LED | PIN_DIAL_EN | PWM_PIN |
+    GPIO_setdir_output(PUSH_PULL, PIN_POWER_LED | PIN_DIAL_EN | PIN_VOLT_PWM |
         PIN_STR_LED1 | PIN_STR_LED2 | PIN_STR_LED3 | PIN_STR_LED4 |
         PIN_OUT1 | PIN_OUT2 | PIN_OUT3 | PIN_OUT4 |
         PIN_RESISTANT);
 
-    GPIO_clear(PWM_PIN);
+    GPIO_clear(PIN_VOLT_PWM);
     OUTPUT_release();
 
     // GPIO_pad_pull(PULL_UP, PIN_HW_VISION_DET);
@@ -193,7 +193,7 @@ void PLATFORM_shutdown(void)
         GPIO_setdir_output(PUSH_PULL_DOWN, PIN_CHARGING_DET);
 
     // power leak
-    GPIO_setdir_output(PUSH_PULL_DOWN, PIN_DIAL_EN | PIN_DIAL_CCW | PIN_DIAL_CW | PWM_PIN |
+    GPIO_setdir_output(PUSH_PULL_DOWN, PIN_DIAL_EN | PIN_DIAL_CCW | PIN_DIAL_CW | PIN_VOLT_PWM |
         PIN_RESISTANT);
 
     if (TIMER_is_configured(HW_TIMER3))
@@ -202,7 +202,7 @@ void PLATFORM_shutdown(void)
 
 void INTENSITY_ctrl_init(void)
 {
-    PWM_no = TIMER_PWM_get(PWM_FREQ, PWM_PIN, NULL);
+    PWM_no = TIMER_PWM_get(PWM_FREQ, PIN_VOLT_PWM, NULL);
 }
 
 void INTENSITY_ctrl_release(uint32_t value)
