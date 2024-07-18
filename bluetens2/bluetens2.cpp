@@ -171,6 +171,9 @@ void PLATFORM_shutdown(void)
     msleep(500);
 
 #ifdef QN908X
+    // REVIEW: somehow high-z leaks 40μA
+    GPIO_setdir_output(PUSH_PULL_DOWN, PINKTENS_DET);
+
     GPIO_wakeup_en(PIN_POWER_BUTTON, false);
     GPIO_wakeup_en(PIN_CHARGING_DET, false);
 #else

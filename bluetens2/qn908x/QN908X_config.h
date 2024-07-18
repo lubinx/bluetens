@@ -131,14 +131,14 @@
     #define PA10_DEF_PAD_PULL           (0)
     #define PA11_DEF_PAD_PULL           (0)
     #define PA12_DEF_PAD_PULL           (0)
-    #define PA13_DEF_PAD_PULL           (0)
-    #define PA14_DEF_PAD_PULL           (0)
-    #define PA15_DEF_PAD_PULL           (0)
+    #define PA13_DEF_PAD_PULL           (2)
+    #define PA14_DEF_PAD_PULL           (2)
+    #define PA15_DEF_PAD_PULL           (2)
     #define PA16_DEF_PAD_PULL           (0)
     #define PA17_DEF_PAD_PULL           (0)
-    #define PA18_DEF_PAD_PULL           (0)
-    #define PA19_DEF_PAD_PULL           (0)
-    #define PA20_DEF_PAD_PULL           (0)
+    #define PA18_DEF_PAD_PULL           (2)
+    #define PA19_DEF_PAD_PULL           (2)
+    #define PA20_DEF_PAD_PULL           (2)
     #define PA21_DEF_PAD_PULL           (0)
     #define PA22_DEF_PAD_PULL           (1)
     #define PA23_DEF_PAD_PULL           (1)
@@ -149,7 +149,7 @@
     #define PA28_DEF_PAD_PULL           (0)
     #define PA29_DEF_PAD_PULL           (0)
     #define PA30_DEF_PAD_PULL           (0)
-    #define PA31_DEF_PAD_PULL           (0)
+    #define PA31_DEF_PAD_PULL           (2)
     #define PB00_DEF_PAD_PULL           (0)
     #define PB01_DEF_PAD_PULL           (0)
     #define PB02_DEF_PAD_PULL           (0)
@@ -279,7 +279,7 @@
 //              <o0> Minimum adv interval  * 1.25ms     <10-3200>
 //              <o1> Maximum adv interval  * 1.25ms     <10-3200>
     #define BLUETOOTH_ADV_MIN_INTERVAL  (120)
-    #define BLUETOOTH_ADV_MAX_INTERVAL  (150)
+    #define BLUETOOTH_ADV_MAX_INTERVAL  (200)
 //          </h>
 //          <h> Peripheral Preferred Connection Parameters
 //              <o0> Minimum connection interval *1.25ms
