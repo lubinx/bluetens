@@ -95,7 +95,7 @@ void PLATFORM_init(void)
     GPIO_setdir_input_pp(PULL_UP, PIN_CHARGING_DET | PIN_HV_PULSE_DET, true);
     GPIO_setdir_input(PINKTENS_DET);
 
-    GPIO_setdir_output(PUSH_PULL_DOWN, PIN_LDO_POWER | PWM_PIN |
+    GPIO_setdir_output(PUSH_PULL_DOWN, PIN_LDO_POWER | PIN_VOLT_PWM |
         PIN_OUT1 | PIN_OUT2 | PIN_OUT3 | PIN_OUT4 |
         PIN_HV_CTRL | PIN_ASY_CTL);
 
@@ -174,10 +174,8 @@ void PLATFORM_shutdown(void)
     GPIO_wakeup_en(PIN_POWER_BUTTON, false);
     GPIO_wakeup_en(PIN_CHARGING_DET, false);
 #else
-    GPIO_disable(PIN_CHARGING_DET);
-
-    GPIO_intr_disable(PIN_ADD_BUTTON);
-    GPIO_intr_disable(PIN_SUB_BUTTON);
+    GPIO_disable(PIN_ADD_BUTTON | PIN_SUB_BUTTON);
+    // GPIO_disable(PIN_CHARGING_DET);
 
     while (0 == GPIO_peek(PIN_POWER_BUTTON));
 #endif
@@ -207,7 +205,7 @@ void INTENSITY_TUV_power_control(bool en, uint32_t intensity)
 
 void INTENSITY_ctrl_init(void)
 {
-    INTENSITY_pwm = PWM_get(PWM_FREQ, PWM_PIN, NULL);
+    INTENSITY_pwm = PWM_get(PWM_FREQ, PIN_VOLT_PWM, NULL);
 
     if (DET_is_pinktens())
         INTENSITY_table = PINKTENS_table;
@@ -246,27 +244,9 @@ int INTENSITY_ctrl(uint32_t value)
 
     if (0 == PWM_update(INTENSITY_pwm, INTENSITY_table[value], INTENSITY_table[0]))
     {
-        /*
-        static uint8_t const LED_table[INTENSITY_TABLE_SIZE] =
-        {
-              5,   7,   9,  11,  13,  15,  17,  19,  21,  23,  25,  27,  29,  31,  33,
-             36,  39,  42,  45,  48,  51,  54,  57,  60,  63,  66,  69,  72,  75,  78,
-             82,  86,  90,  94,  98, 102, 106, 110, 114, 118, 122, 126, 130, 134, 138,
-            153, 158, 163, 168, 173, 178, 183, 188, 193, 198, 203, 208, 213, 218, 223
-        };
-
-        if (0 >= LED_context.pwm)
-            LED_context.pwm = PWM_get(LED_FREQ, PIN_BLUE_EN, NULL);
-
-        if (0 < LED_context.pwm)
-        {
-            PWM_update(LED_context.pwm, LED_MAX_LUMA - LED_table[value - 1], LED_MAX_LUMA);
-            GPIO_clear(PIN_LED1 | PIN_LED2 | PIN_LED3 | PIN_LED4);
-        }
-        */
         static uint16_t const LED_table[INTENSITY_TABLE_SIZE / 4] =
         {
-            20, 28, 36, 44, 52, 60, 70, 80, 90, 115, 130, 150, 170, 200, 235
+            10, 20, 31, 43, 56, 70, 85, 101, 118, 136, 155, 175, 196, 218, 241
         };
 
         TIMER_stop(HW_TIMER1);
