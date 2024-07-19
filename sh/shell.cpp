@@ -44,7 +44,7 @@ void SHELL_init(void)
     UCSH_init();
 
 #if LOKI_SUPPORT_VERSION > 1
-    UCSH_register("mode", SHELL_mode);
+    UCSH_register("mode",   SHELL_mode);
 #endif
     UCSH_register("ssta",   SHELL_start_script);
     UCSH_register("osto",   SHELL_stop_output);
