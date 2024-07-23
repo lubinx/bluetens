@@ -309,9 +309,7 @@ static void GPIO_callback(uint32_t pins, void *arg)
 
         for (uint8_t i = 0; i < DEF_FILE_COUNT; i ++)
         {
-            char const *filename = App->DefaultFile(i);
-
-            if ('\0' != filename[0])
+            if (NULL != App->DefaultFile(i))
             {
                 count ++;
                 idx = i;
@@ -332,9 +330,7 @@ static void GPIO_callback(uint32_t pins, void *arg)
             {
                 idx = (uint8_t)(idx + 1) % DEF_FILE_COUNT;
 
-                char const *filename = App->DefaultFile(idx);
-
-                if ('\0' != filename[0])
+                if (NULL != App->DefaultFile(idx))
                     break;
             }
             LED_context.file_idx = idx;
@@ -345,15 +341,13 @@ static void GPIO_callback(uint32_t pins, void *arg)
     }
     else if (LED_IND_SELECT_FILE == LED_context.ind)
     {
-        if (PIN_SUB_BUTTON & pins)
+        if (PIN_SUB_BUTTON == (PIN_SUB_BUTTON & pins))
         {
             LED_context.file_idx = -1;
             LED_switch_indicator(LED_IND_POWER);
         }
-        else if (PIN_POWER_BUTTON & pins)
+        else if (PIN_POWER_BUTTON == (PIN_POWER_BUTTON & pins))
         {
-            LED_switch_indicator(LED_IND_POWER);
-
 start_default_file:
             ((TApplication *)arg)->StartDefaultFile((uint8_t)LED_context.file_idx);
             LED_context.file_idx = -1;

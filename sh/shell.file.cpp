@@ -234,7 +234,10 @@ int SHELL_default_file(struct UCSH_env *env)
         }
     }
 
-    UCSH_printf(env, "sdef=%s\r\n", App->DefaultFile(0));
+    char const *filename = App->DefaultFile(0);
+    if (NULL == filename) filename = "";
+
+    UCSH_printf(env, "sdef=%s\r\n", filename);
     return ECHO_OFF;
 }
 
@@ -265,7 +268,12 @@ int SHELL_default_file2(struct UCSH_env *env)
     else
     {
         for (uint8_t i = 0; i < DEF_FILE_COUNT; i ++)
-            UCSH_printf(env, "idx=%d;filename=%s\r\n", i, App->DefaultFile(i));
+        {
+            char const *filename = App->DefaultFile(i);
+            if (NULL == filename) filename = "";
+
+            UCSH_printf(env, "idx=%d;filename=%s\r\n", i, filename);
+        }
 
         return ECHO_OFF;
     }
