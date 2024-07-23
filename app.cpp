@@ -143,12 +143,6 @@ void PLATFORM_msg_activity(uint32_t MsgId)
 }
 
 __attribute__((weak))
-void PLATFORM_start_defile(void)
-{
-    // nothing to do
-}
-
-__attribute__((weak))
 uint32_t INTENSITY_adjust(uint32_t value, int adjust)
 {
     /// for all @single channel
@@ -432,13 +426,25 @@ void TApplication::Stop()
     }
 }
 
+char *TApplication::DefaultFile(uint8_t const idx)
+{
+    if (idx < DEF_FILE_COUNT)
+    {
+        char *filename = FDefFiles[idx];
+        int fd;
+
+        if (-1 != (fd = open(filename, 0)))
+        {
+            close(fd);
+            return filename;
+        }
+    }
+
+    return NULL;
+}
+
 int TApplication::UpdateDefaultFile(uint8_t idx, char const *filename)
 {
-    /*
-    if (0 == strncmp("test", filename, 4))
-        return 0;
-    */
-
     if (idx < DEF_FILE_COUNT)
     {
         if (0 != strncmp(FDefFiles[idx], filename, NVM_DEF_FILE_SIZE))
@@ -617,10 +623,7 @@ void TApplication::MSG_StartDefaultFile(uint32_t const idx)
         FMsgQueue.PostMessage(MSG_SET_INTENSITY, INTENSITY_adjust(0, 1));
     }
     else
-    {
-        PLATFORM_start_defile();
         StartFile(FDefFiles[idx]);
-    }
 }
 
 void TApplication::MSG_Starting(uint32_t const str)

@@ -76,8 +76,7 @@ public:
     void SetIntensity(uint32_t value, bool Notification);
     void Stop();
 
-    char *DefaultFile(uint8_t const idx)
-        { return idx < DEF_FILE_COUNT ? FDefFiles[idx] : NULL; }
+    char *DefaultFile(uint8_t const idx);
     int UpdateDefaultFile(uint8_t idx, char const *filename);
 
 public:     // properties
