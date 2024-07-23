@@ -41,12 +41,11 @@ __BEGIN_DECLS
 
 #if defined(QN908X)
     #include "QN908X_porting.h"
-    #define PROJECT_VERSION             VERSION_INFO(3, 3, 6)
 #elif defined(EFR32BG22C224F512GM40)
     #define BG22
     #include "BG22_porting.h"
-    #define PROJECT_VERSION             VERSION_INFO(3, 2, 5)
 #endif
+    #define PROJECT_VERSION             VERSION_INFO(3, 3, 7)
 
 /// @shutdown after 30 seconds idle
     #define SHUTDOWN_IDLE_SECONDS       (30)
@@ -64,7 +63,7 @@ __BEGIN_DECLS
 
 /// @battery override
     #undef BATTERY_LOW_VOLTAGE
-    #define BATTERY_LOW_VOLTAGE         (3100)
+    #define BATTERY_LOW_VOLTAGE         (3250)
 
 /// change @default file count to 4
     #undef DEF_FILE_COUNT
