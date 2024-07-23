@@ -28,7 +28,7 @@
     #define PIN_BATT                    (PA05)
     #define BATT_NUMERATOR              (970)
     #define BATT_DENOMINATOR            (220)
-    #define BATTERY_ADC_CALIB           (50)
+    #define BATTERY_ADC_CALIB           (0)
 
 /// @PWM
     #define PIN_VOLT_PWM                PA00
