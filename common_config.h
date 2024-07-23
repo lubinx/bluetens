@@ -43,7 +43,7 @@
     // #define DEFILE_USING_LAST_RUNNING
 
 /** @battery ADC */
-    #define BATTERY_EMPTY_VOLTAGE       (3150)
+    #define BATTERY_EMPTY_VOLTAGE       (3100)
     /// @bluetens product has history issue: 5000mv is full battery
     // #define BATTERY_COMPAT_BLUETENS_V1
 
@@ -80,8 +80,6 @@ extern __attribute__((nothrow))
     void PLATFORM_idle(void);
 extern __attribute__((nothrow))
     void PLATFORM_lowbattery(void);
-extern __attribute__((nothrow))
-    void PLATFORM_start_defile(void);
 
 extern __attribute__((nothrow))
     void INTENSITY_ctrl_init(void);
