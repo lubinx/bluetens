@@ -171,8 +171,12 @@ void PLATFORM_shutdown(void)
     msleep(500);
 
 #ifdef QN908X
+    UART_deconfigure(CONSOLE_DEV);
+
+    GPIO_setdir_input_pp(PULL_DOWN,  CONSOLE_TXD, true);
+    GPIO_setdir_input_pp(PULL_DOWN,  CONSOLE_RXD, true);
     // REVIEW: somehow high-z leaks 40μA
-    GPIO_setdir_output(PUSH_PULL_DOWN, PINKTENS_DET);
+    GPIO_setdir_input_pp(PULL_DOWN, PINKTENS_DET, true);
 
     GPIO_wakeup_en(PIN_POWER_BUTTON, false);
     GPIO_wakeup_en(PIN_CHARGING_DET, false);
