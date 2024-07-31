@@ -114,8 +114,6 @@ void PLATFORM_init(void)
 
 bool PLATFORM_startup(void)
 {
-    bool retval;
-
 #ifndef NO_DET_CHARGING
     if (DET_is_charging())
     {
@@ -136,7 +134,7 @@ bool PLATFORM_startup(void)
             WDOG_feed();
             msleep(5);
         }
-        retval = false;
+        return false;
     }
     else
 #endif
@@ -148,17 +146,19 @@ bool PLATFORM_startup(void)
 #else
         int batt = 3700;
 #endif
-        if (BATTERY_EMPTY_VOLTAGE < batt)
-            LED_switch_indicator(LED_IND_POWER);
 
-        retval = true;
+        if (BATTERY_LOW_VOLTAGE >= batt)
+        {
+            LED_switch_indicator(LED_IND_LOW_BATT);
+            return false;
+        }
     }
 
+    LED_switch_indicator(LED_IND_POWER);
     GPIO_intr_enable(PIN_POWER_BUTTON, TRIG_BY_FALLING_EDGE, GPIO_callback, App);
     GPIO_intr_enable(PIN_ADD_BUTTON, TRIG_BY_FALLING_EDGE, GPIO_callback, App);
     GPIO_intr_enable(PIN_SUB_BUTTON, TRIG_BY_FALLING_EDGE, GPIO_callback, App);
-
-    return retval;
+    return true;
 }
 
 void PLATFORM_shutdown(void)
@@ -456,6 +456,8 @@ static void LED_switch_indicator(enum LED_indicator_t ind)
     }
     else if (LED_IND_LOW_BATT == ind)
     {
+        GPIO_clear(PIN_LED1 | PIN_LED2 | PIN_LED3 | PIN_LED4);
+
         for (int n = 0; n < 3; n ++)
         {
             for (int i = LED_LOW_BATT_FRAMES; i > 1; i --)
@@ -472,7 +474,6 @@ static void LED_switch_indicator(enum LED_indicator_t ind)
                 TIMER_match_clear(HW_TIMER1);
             }
         }
-        GPIO_set(PIN_LED1 | PIN_LED2 | PIN_LED3 | PIN_LED4);
     }
     else if (LED_IND_BATT == ind)
     {
