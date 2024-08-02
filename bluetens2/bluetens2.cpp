@@ -147,7 +147,12 @@ bool PLATFORM_startup(void)
         int batt = 3700;
 #endif
 
-        if (BATTERY_LOW_VOLTAGE >= batt)
+        if (BATTERY_EMPTY_VOLTAGE >= batt)
+        {
+            LED_switch_indicator(LED_IND_BATT);
+            return false;
+        }
+        else if (BATTERY_LOW_VOLTAGE >= batt)
         {
             LED_switch_indicator(LED_IND_LOW_BATT);
             return false;
